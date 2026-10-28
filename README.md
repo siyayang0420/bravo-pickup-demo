@@ -2,7 +2,7 @@
 
 A demo of pickup ordering for [Bravo](https://www.bravoup.ca): a landing page, a menu page for each of 20 restaurants, and a cart that ends in a pickup confirmation. It is a standalone static site with no build step and no dependencies, kept apart from the website repo (`bravo_web_client_v2`), whose design system it follows.
 
-Nothing is sent anywhere: placing an order only shows a confirmation code. The cart is kept in the browser's `localStorage`.
+Nothing is sent anywhere: placing an order only shows a confirmation code. The cart and the signed-in name and email are kept in the browser's `localStorage`. The footer is a copy of the bravoup.ca gift card footer, with its links pointing to bravoup.ca.
 
 ## Open it
 
@@ -19,10 +19,11 @@ Then go to http://localhost:4300. Photos load from Bravo's S3 bucket, so you nee
 | Page | What it shows |
 |---|---|
 | `index.html` | Hero with search, a "Most liked for pickup" row (each restaurant's #1 dish), how pickup works, and the 20 restaurants with cuisine filters |
-| `restaurant.html?id={store id}` | Photos, rating, today's hours and address, the "Featured items" row, and the full menu by section, with a sticky section bar |
-| Cart drawer (both pages) | Quantities, pickup time (as soon as it's ready, or a 15-minute slot today), name, payment (Bravo Dining Gift Card or pay at the counter), subtotal, GST and total |
+| `restaurant.html?id={store id}` | Photos, address, today's ordering hours, ready time and a Delivery / Pickup switch (Delivery isn't available), the "Featured items" row, and the full menu by section, with a sticky section bar |
+| Sign In / Sign Up (both pages) | A dialog with email and password, or name, email and password to sign up. Placing an order needs an account. |
+| Cart drawer (both pages) | Opened from the Yolk cart button in the nav. Quantities, pickup time (as soon as it's ready, or a 15-minute slot today), name, payment (Bravo Dining Gift Card or pay at the counter), subtotal, GST and total |
 
-The dish cards follow the Figma frame "Featured items" (Bravo – Website, node 6243:314): 151.67 × 153 photo with 10px corners, a "#n Most liked" badge and a white "+" button inset 6px, name in 16px semibold, the regular price struck through in 12px grey next to the pickup price in 14px semibold. Two small departures: the two prices have a 4px gap and share a baseline (in the frame they touch), and the cards widen to 200px from 768px up. Once a dish is in the cart, its "+" shows the quantity.
+The dish cards follow the Figma frame "Featured items" (Bravo – Website, node 6243:314): 151.67 × 153 photo with 10px corners, a "#n Most liked" badge and a white "+" button inset 6px, name in 16px semibold, the regular price struck through in 12px grey next to the pickup price in 14px semibold. Two small departures: the two prices have a 4px gap and share a baseline (in the frame they touch), and the cards widen to 200px from 768px up. Once a dish is in the cart, its "+" becomes a "− n +" stepper.
 
 ## Data
 
@@ -65,7 +66,7 @@ assets/                       logo, Figma icons, fonts
 
 ## Not built
 
-- Hours are read for the current day only, so a store whose hours run past midnight may show as closed just after midnight.
+- Sign-in is a demo: any email and password work, only the name and email are kept in this browser, and there's no Google or phone sign-in.
 - Pickup times aren't checked against opening hours.
 - No dish detail view or options (sizes, spice level, add-ons).
 - Pages render in the browser, so search engines would see an empty page. A production version would render on the server, like the website does.

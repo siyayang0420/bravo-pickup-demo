@@ -11,15 +11,22 @@ const unit = i => i.pickup ?? i.price
 const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches
 const PLUS = '<img src="assets/icons/plus.svg" alt="" width="20" height="20">'
+const MINUS = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.16667 10H15.8333" stroke="#202020" stroke-width="1.5" stroke-linecap="round"/></svg>'
 const CLOSE = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>'
+
+// localStorage can be missing or blocked (private windows); the page works without it
+const load = (key) => { try { return JSON.parse(localStorage.getItem(key)) } catch { return null } }
+const save = (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)) } catch {} }
+
+/* ── Account (demo: name and email only, no password is kept) ── */
+const USER_KEY = 'bravo-pickup-user'
+let user = load(USER_KEY) // { name, email, signedIn }
+const signedIn = () => Boolean(user?.signedIn)
 
 /* ── Cart (one restaurant at a time, kept in this browser) ── */
 const CART_KEY = 'bravo-pickup-cart'
 const emptyCart = () => ({ store: null, lines: {} })
-let cart = (() => {
-  try { return JSON.parse(localStorage.getItem(CART_KEY)) || emptyCart() }
-  catch { return emptyCart() }
-})()
+let cart = load(CART_KEY) || emptyCart()
 cart.lines = Object.fromEntries(Object.entries(cart.lines || {}).filter(([id]) => ITEMS.has(id)))
 
 const qty = id => cart.lines[id] || 0
@@ -35,7 +42,7 @@ function setQty(id, n) {
   if (n > 0) { cart.lines[id] = n; cart.store = item.store.id }
   else delete cart.lines[id]
   if (!Object.keys(cart.lines).length) cart.store = null
-  try { localStorage.setItem(CART_KEY, JSON.stringify(cart)) } catch {}
+  save(CART_KEY, cart)
   renderCart()
 }
 
@@ -49,11 +56,14 @@ function totals() {
 
 /* ── Shared bits ── */
 const priceHtml = i => `<span class="price">${i.pickup ? `<s>${money(i.price)}</s><b>${money(i.pickup)}</b>` : `<b>${money(i.price)}</b>`}</span>`
-const addLabel = (i, n) => `Add ${i.name}${n ? ` (${n} in cart)` : ''}`
-const addBtn = (i) => {
+// "+" until the dish is in the cart, then "− n +"
+const qtyInner = (i) => {
   const n = qty(i.id)
-  return `<button class="add-btn${n ? ' has' : ''}" type="button" data-add="${i.id}" aria-label="${esc(addLabel(i, n))}">${PLUS}<span>${n || ''}</span></button>`
+  return n
+    ? `<button type="button" data-step="${i.id}:-1" aria-label="Remove one ${esc(i.name)}">${MINUS}</button><span>${n}</span><button type="button" data-step="${i.id}:1" aria-label="Add another ${esc(i.name)}">${PLUS}</button>`
+    : `<button class="add-btn" type="button" data-step="${i.id}:1" aria-label="Add ${esc(i.name)}">${PLUS}</button>`
 }
+const addBtn = i => `<div class="qty-ctl${qty(i.id) ? ' on' : ''}" data-qty="${i.id}">${qtyInner(i)}</div>`
 const dishImg = (i, w, h) => `<img src="${esc(i.image)}" alt="${esc(i.name)}" width="${w}" height="${h}" loading="lazy" decoding="async">`
 
 // Figma 6243:314: photo with "+" and an optional "#n Most liked" badge, then name and price
@@ -73,7 +83,11 @@ const dishCard = (i, rank, withStore) => `
 
 const ratingHtml = s => s.rating_count ? `<span class="star">★ ${s.rating.toFixed(1)}</span> (${s.rating_count})` : '<span class="star">New</span>'
 const dot = '<span class="dot" aria-hidden="true"></span>'
-const fullAddress = s => s.address.toLowerCase().includes(s.city.toLowerCase().replace('downtown ', '')) ? s.address : `${s.address}, ${s.city}`
+const fullAddress = (s) => {
+  const a = s.address.toLowerCase().includes(s.city.toLowerCase().replace('downtown ', '')) ? s.address : `${s.address}, ${s.city}`
+  return /\bBC\b/.test(a) ? a : `${a}, BC`
+}
+const STORE_ICON = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 8.5V16h13V8.5M2.5 4h15l.75 3a2.25 2.25 0 0 1-4.5.25 2.25 2.25 0 0 1-4.5 0 2.25 2.25 0 0 1-4.5-.25L5 4" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 16v-4h4v4" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>'
 
 function initCarousel(root) {
   const track = $('[data-track]', root)
@@ -91,19 +105,16 @@ function initCarousel(root) {
   update()
 }
 
-/** Today's hours in Vancouver and whether the store is open now. */
-function today(s) {
-  const parts = new Intl.DateTimeFormat('en-US', { timeZone: ZONE, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date())
-  const get = type => parts.find(p => p.type === type).value
-  const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(get('weekday'))
-  const now = Number(get('hour')) * 60 + Number(get('minute'))
-  const hours = s.hours.filter(p => p.day === day).flatMap(p => p.hours)
-  const ranges = hours.map(r => /^(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})$/.exec(r.trim())).filter(Boolean)
-    .map(m => [m[1] * 60 + Number(m[2]), m[3] * 60 + Number(m[4])])
-  // ponytail: ignores yesterday's ranges that run past midnight; fine for these 20 stores' hours
-  const open = ranges.some(([a, b]) => b <= a ? now >= a || now < b : now >= a && now < b)
-  const clock = m => { const h = Math.floor(m / 60) % 24; return `${h % 12 || 12}:${String(m % 60).padStart(2, '0')} ${h < 12 ? 'am' : 'pm'}` }
-  return { listed: s.hours.length > 0, open, text: ranges.map(([a, b]) => `${clock(a)} – ${clock(b)}`).join(', ') }
+/** Today's opening hours in Vancouver, e.g. "11:30 AM – 2:30 PM, 5:00 PM – 10:00 PM". */
+function hoursToday(s) {
+  if (!s.hours.length) return 'not listed'
+  const weekday = new Intl.DateTimeFormat('en-US', { timeZone: ZONE, weekday: 'short' }).format(new Date())
+  const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(weekday)
+  const clock = (h, m) => `${h % 12 || 12}:${m} ${h % 24 < 12 ? 'AM' : 'PM'}`
+  const ranges = s.hours.filter(p => p.day === day).flatMap(p => p.hours)
+    .map(r => /^(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})$/.exec(r.trim())).filter(Boolean)
+    .map(m => `${clock(Number(m[1]), m[2])} – ${clock(Number(m[3]), m[4])}`)
+  return ranges.join(', ') || 'closed today'
 }
 
 function pickupTimes(s) {
@@ -182,31 +193,22 @@ function renderStore() {
   document.title = `${s.name} Pickup Menu | Bravo`
   $('meta[name="description"]').content = `Order ${s.name} ahead for pickup in ${s.city}. Ready in about ${s.ready} minutes.`
 
-  const hours = today(s)
-  const priceLevel = '$'.repeat(s.average_price < 1500 ? 1 : s.average_price < 3000 ? 2 : 3)
   const slug = (t, k) => `cat-${k}-${t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`
 
   main.insertAdjacentHTML('beforeend', `
     <div class="container">
       <div class="cover">${s.photos.slice(0, 3).map((p, k) => `<img src="${esc(p)}" alt="" width="800" height="320" ${k ? '' : 'fetchpriority="high"'} decoding="async">`).join('')}</div>
       <div class="store-head">
-        <div>
-          <div class="store-title">
-            <img class="store-logo" src="${esc(s.logo)}" alt="" width="56" height="56">
-            <div>
-              <h1>${esc(s.name)}</h1>
-              <p class="meta">${ratingHtml(s)}${dot}${esc(s.cuisine)}${dot}${esc(s.city)}${dot}${priceLevel}</p>
-            </div>
-          </div>
-          <div class="store-tags">${s.tags.map(t => `<span>${esc(t)}</span>`).join('')}</div>
+        <div class="store-info">
+          <h1>${esc(s.name)}</h1>
+          <p class="store-address">${STORE_ICON}${esc(fullAddress(s))}</p>
+          <p>Online ordering hours: ${hoursToday(s)}</p>
+          <div class="ready-box"><b>${s.ready} min</b><span>ready for pickup</span></div>
         </div>
-        <aside class="pickup-card" aria-label="Pickup details">
-          <div class="row"><span>Pickup</span><span>Ready in about ${s.ready} mins</span></div>
-          <div class="row"><span>Pickup deal</span><span>20% off featured items</span></div>
-          <div class="row"><span>Address</span><span>${esc(fullAddress(s))}</span></div>
-          <div class="row"><span>Today</span><span>${!hours.listed ? 'Hours not listed' : hours.text ? `<span class="${hours.open ? 'open' : 'closed'}">${hours.open ? 'Open now' : 'Closed now'}</span> · ${hours.text}` : '<span class="closed">Closed today</span>'}</span></div>
-          <a href="https://www.bravoup.ca/store/${s.id}" target="_blank" rel="noopener">${esc(s.name)} on bravoup.ca</a>
-        </aside>
+        <div class="mode-toggle" role="group" aria-label="Order type">
+          <button type="button" aria-disabled="true" title="Delivery isn't available yet">Delivery</button>
+          <button type="button" aria-pressed="true">Pickup</button>
+        </div>
       </div>
 
       <section class="section" style="padding-bottom: 0" aria-labelledby="featured">
@@ -271,12 +273,17 @@ let placed = null
 function renderCart() {
   const t = totals()
   document.querySelectorAll('[data-cart-count]').forEach(el => { el.textContent = t.count || '' })
-  for (const b of document.querySelectorAll('[data-add]')) {
-    const n = qty(b.dataset.add)
-    b.classList.toggle('has', n > 0)
-    b.lastElementChild.textContent = n || ''
-    b.setAttribute('aria-label', addLabel(ITEMS.get(b.dataset.add), n))
+  document.querySelectorAll('.cart-pill').forEach(b => b.setAttribute('aria-label', t.count ? `Cart, ${plural(t.count, 'item')}` : 'Cart'))
+
+  // swap "+" and "− n +"; keep keyboard focus on the control that was pressed
+  const focusedStep = document.activeElement?.getAttribute('data-step')
+  const focusedCtl = document.activeElement?.closest('[data-qty]')
+  for (const ctl of document.querySelectorAll('[data-qty]')) {
+    const item = ITEMS.get(ctl.dataset.qty)
+    ctl.classList.toggle('on', qty(item.id) > 0)
+    ctl.innerHTML = qtyInner(item)
   }
+  if (focusedCtl) (focusedCtl.querySelector(`[data-step="${focusedStep}"]`) || focusedCtl.querySelector('[data-step]')).focus()
   const bar = $('[data-cart-bar]')
   bar.hidden = !t.count
   document.body.classList.toggle('has-cart', t.count > 0)
@@ -298,9 +305,9 @@ const linesHtml = () => cartLines().map(({ item: i, n }) => `
     ${i.image ? dishImg(i, 48, 48) : ''}
     <div class="grow"><p>${esc(i.name)}</p><p>${money(unit(i) * n)}</p></div>
     <div class="stepper">
-      <button type="button" data-step="${i.id}:-1" aria-label="Remove one ${esc(i.name)}">−</button>
+      <button type="button" data-step="${i.id}:-1" aria-label="Remove one ${esc(i.name)}">${MINUS}</button>
       <span aria-label="Quantity">${n}</span>
-      <button type="button" data-step="${i.id}:1" aria-label="Add one ${esc(i.name)}">+</button>
+      <button type="button" data-step="${i.id}:1" aria-label="Add one ${esc(i.name)}">${PLUS}</button>
     </div>
   </div>`).join('')
 
@@ -350,7 +357,7 @@ function renderDrawer() {
         </div>
         <div class="field">
           <label for="pickup-name">Name for the order</label>
-          <input id="pickup-name" name="name" type="text" autocomplete="given-name" required>
+          <input id="pickup-name" name="name" type="text" autocomplete="given-name" value="${esc(signedIn() ? user.name : '')}" required>
         </div>
         <fieldset class="field">
           <legend>Payment</legend>
@@ -360,10 +367,15 @@ function renderDrawer() {
       </div>
       <div class="drawer-foot">
         <div class="totals" data-totals>${totalsHtml()}</div>
-        <button class="btn btn-block" type="submit">Place pickup order</button>
+        <div class="checkout-action" data-checkout-action>${checkoutAction()}</div>
       </div>
     </form>`
 }
+
+const checkoutAction = () => signedIn()
+  ? '<button class="btn btn-block" type="submit">Place pickup order</button>'
+  : `<button class="btn btn-block" type="button" data-auth="signin">Sign in to place order</button>
+     <p class="checkout-note">New to Bravo? <button class="link-btn" type="button" data-auth="signup">Create an account</button></p>`
 
 function openDrawer() {
   placed = null
@@ -371,9 +383,60 @@ function openDrawer() {
   drawer.showModal()
 }
 
+/* ── Sign in / sign up (demo: kept in this browser, nothing is checked) ── */
+const authDialog = $('[data-auth-dialog]')
+
+function renderAuth() {
+  $('[data-auth-slot]').innerHTML = signedIn()
+    ? `<span class="nav-user">Hi, ${esc(user.name.split(' ')[0])}</span><button class="btn-ghost" type="button" data-signout>Sign out</button>`
+    : '<button class="btn-ghost" type="button" data-auth="signin">Sign In / Sign Up</button>'
+  if (drawer.open && !placed && $('[data-checkout-action]', drawer)) {
+    $('[data-checkout-action]', drawer).innerHTML = checkoutAction()
+    const name = $('#pickup-name', drawer)
+    if (signedIn() && !name.value) name.value = user.name
+  }
+}
+
+function openAuth(mode) {
+  const signup = mode === 'signup'
+  const field = (id, label, attrs) => `<div class="field"><label for="${id}">${label}</label><input id="${id}" ${attrs} required></div>`
+  authDialog.innerHTML = `
+    <div class="drawer-head"><h2 id="auth-title">${signup ? 'Create your account' : 'Sign in'}</h2><button class="round-btn" type="button" data-auth-close aria-label="Close">${CLOSE}</button></div>
+    <form class="modal-body" data-mode="${mode}">
+      <p class="modal-lede">${signup ? 'Sign up to order ahead for pickup and pay with your Bravo Dining Gift Card.' : 'Sign in to your Bravo account to place pickup orders.'}</p>
+      ${signup ? field('auth-name', 'Name', 'name="name" type="text" autocomplete="name"') : ''}
+      ${field('auth-email', 'Email', 'name="email" type="email" autocomplete="email" placeholder="you@example.com"')}
+      ${field('auth-password', 'Password', `name="password" type="password" autocomplete="${signup ? 'new-password' : 'current-password'}" minlength="${signup ? 8 : 1}"`)}
+      <button class="btn btn-block" type="submit">${signup ? 'Sign up' : 'Sign in'}</button>
+      <p class="modal-switch">${signup ? 'Already have an account?' : 'Don\'t have an account?'} <button class="link-btn" type="button" data-auth="${signup ? 'signin' : 'signup'}">${signup ? 'Sign in' : 'Sign up'}</button></p>
+      <p class="modal-note">Demo only: you stay signed in on this browser. Passwords aren't checked or saved.</p>
+    </form>`
+  if (!authDialog.open) authDialog.showModal()
+  $('input', authDialog).focus()
+}
+
+authDialog.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const form = new FormData(e.target)
+  const email = form.get('email').trim()
+  const name = e.target.dataset.mode === 'signup'
+    ? form.get('name').trim()
+    : user?.email === email ? user.name : email.split('@')[0].replace(/^./, c => c.toUpperCase())
+  user = { name, email, signedIn: true }
+  save(USER_KEY, user)
+  authDialog.close()
+  renderAuth()
+})
+
 document.addEventListener('click', (e) => {
-  const add = e.target.closest('[data-add]')
-  if (add) return setQty(add.dataset.add, qty(add.dataset.add) + 1)
+  const auth = e.target.closest('[data-auth]')
+  if (auth) return openAuth(auth.dataset.auth)
+  if (e.target.closest('[data-signout]')) {
+    user = { ...user, signedIn: false }
+    save(USER_KEY, user)
+    return renderAuth()
+  }
+  if (e.target.closest('[data-auth-close]') || e.target === authDialog) return authDialog.close()
   const step = e.target.closest('[data-step]')
   if (step) {
     const [id, d] = step.dataset.step.split(':')
@@ -385,6 +448,7 @@ document.addEventListener('click', (e) => {
 
 drawer.addEventListener('submit', (e) => {
   e.preventDefault()
+  if (!signedIn()) return openAuth('signin')
   const form = new FormData(e.target)
   placed = {
     store: STORES.find(s => s.id === cart.store),
@@ -395,11 +459,12 @@ drawer.addEventListener('submit', (e) => {
     time: e.target.elements.time.selectedOptions[0].textContent.replace(/^./, c => c.toLowerCase()),
   }
   cart = emptyCart()
-  try { localStorage.setItem(CART_KEY, JSON.stringify(cart)) } catch {}
+  save(CART_KEY, cart)
   renderCart()
   renderDrawer()
 })
 
 if (document.body.dataset.page === 'home') renderHome()
 else renderStore()
+renderAuth()
 renderCart()

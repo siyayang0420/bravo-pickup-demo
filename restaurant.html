@@ -15,7 +15,10 @@
         <img src="assets/logo-bravo.svg" alt="bravo" width="87.4" height="26">
         <span class="nav-tag">Pickup</span>
       </a>
-      <button class="btn-ghost" type="button" data-open-cart>Cart <span class="cart-count" data-cart-count></span></button>
+      <div class="nav-actions">
+        <span class="auth-slot" data-auth-slot><button class="btn-ghost" type="button" data-auth="signin">Sign In / Sign Up</button></span>
+        <button class="cart-pill" type="button" data-open-cart aria-label="Cart"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg><span class="cart-count" data-cart-count></span></button>
+      </div>
     </div>
   </header>
 
@@ -28,14 +31,57 @@
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>A demo of pickup ordering for <a href="https://www.bravoup.ca">Bravo</a>. Restaurants, ratings and dish photos come from Bravo's catalog; the rest of each menu, prices, pickup times and the order flow are made up. No orders are sent.</p>
+<!-- Same as the bravoup.ca gift card footer (components/Footer.vue in bravo_web_client_v2) -->
+  <footer class="footer" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="footer-inner">
+      <section class="footer-app" aria-labelledby="footer-app-heading">
+        <div>
+          <h3 id="footer-app-heading">Get the Bravo app</h3>
+          <p>Pay in seconds with your QR code, and get rewards only in the app.</p>
+        </div>
+        <div class="footer-app-get">
+          <div class="footer-qr"><img src="assets/badges/get-app-qr.svg" alt="QR code to download the Bravo app" width="80" height="80"></div>
+          <div class="footer-badges">
+            <a href="https://apps.apple.com/app/bravo-rewards/id6477488926" target="_blank" rel="noopener noreferrer"><img src="assets/badges/app-store.svg" alt="Download on the App Store" width="120" height="40"></a>
+            <a class="gplay" href="https://play.google.com/store/apps/details?id=ca.bravoup.app" target="_blank" rel="noopener noreferrer"><img src="assets/badges/google-play.png" alt="Get it on Google Play" width="155" height="60"></a>
+          </div>
+        </div>
+      </section>
+      <div class="footer-main">
+        <div class="footer-cols">
+        <nav aria-labelledby="foot-col-gift">
+          <h3 id="foot-col-gift">Gift Ideas</h3>
+          <ul><li><a href="https://www.bravoup.ca/giftcard/occasions"><span>Gift by Occasion</span></a></li><li><a href="https://www.bravoup.ca/giftcard/holidays"><span>Holiday Gifts</span></a></li><li><a href="https://www.bravoup.ca/giftcard/gifts-for"><span>Who It’s For</span></a></li><li><a href="https://www.bravoup.ca/giftcard/gift-ideas"><span>Explore All Gift Ideas</span></a></li></ul>
+        </nav>
+        <nav aria-labelledby="foot-col-explore">
+          <h3 id="foot-col-explore">Explore Bravo</h3>
+          <ul><li><a href="https://www.bravoup.ca/giftcard"><span>Shop eGift Card</span></a></li><li><a href="https://www.bravoup.ca/wallet"><span>My Gift Card</span></a></li><li><a href="https://www.bravoup.ca/restaurants"><span>Partner Restaurants</span></a></li><li><a href="https://www.bravoup.ca/checkbalance"><span>Check balance</span></a></li><li><a href="https://www.bravoup.ca/giftcard/stablecoin"><span>Pay with USDT / USDC</span></a></li><li><a href="https://www.bravoup.ca/faq"><span>FAQs</span></a></li></ul>
+        </nav>
+        <nav aria-labelledby="foot-col-company">
+          <h3 id="foot-col-company">Company</h3>
+          <ul><li><a href="https://www.bravoup.ca/about"><span>About Bravo</span></a></li><li><a href="https://www.bravoup.ca/giftcard/corporate"><span>Corporate Gifts</span></a></li><li><a href="https://www.bravoup.ca/business"><span>Become a partner</span></a></li><li><a href="https://www.bravoup.ca/contact-us"><span>Contact Us</span></a></li><li><a href="https://www.bravoup.ca/blogs"><span>Blog</span></a></li><li><a href="https://www.bravoup.ca/get-app"><span>Bravo Rewards App</span></a></li><li><a href="https://portal.bravoup.ca" target="_blank" rel="noopener noreferrer"><span>Merchants Portals</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li></ul>
+        </nav>
+        <nav aria-labelledby="foot-col-legal">
+          <h3 id="foot-col-legal">Legal</h3>
+          <ul><li><a href="https://www.bravoup.ca/terms-of-use"><span>Terms of Use</span></a></li><li><a href="https://www.bravoup.ca/privacy-policy"><span>Privacy Policy</span></a></li></ul>
+        </nav>
+        </div>
+        <a class="footer-logo" href="https://www.bravoup.ca/" aria-label="Bravo home"><svg viewBox="0 0 500 145" width="137.9" height="40" aria-hidden="true"><g fill="#fff"><path d="M159.4,37.5l-2.3,11.9h.8c6.6-6.8,15.3-12.7,28.5-12.7s5.3.4,7.6,1.1l-4.3,24.2c-2.3-.8-4.9-1.1-7.6-1.1-17,0-28.5,8.1-31.5,25.1l-9.8,56.5h-24.2l18.5-104.8,24.4-.2h0Z" /><path d="M236.3,97.3c-15.7.6-24.9,5.1-24.9,16.2s6.2,11.3,14.7,11.3c15.7,0,30-9.8,32.5-25.3l.4-2.6c-5.1,0-7.9-.2-22.7.4M275.8,142.4h-23.4c0-7.4.4-10.9.9-14.4h-.4c-11.7,13.6-22.5,16.2-33.6,16.2-19.4,0-32.3-11.1-32.3-27.6s16.2-35.7,42.3-36.8c13.6-.6,32.5-.4,32.5-.4l.8-4.3s.8-3.6.8-6.2c0-9.1-7.9-14.2-17.8-14.2s-21.5,7.2-24.7,16.8l-24.4-1.5c5.1-22.3,24.2-34.4,50.2-34.4s40,13.6,40,34.2-1.1,11.7-1.7,14.7l-4.3,24.7c-3.4,18.9-4.9,25.9-4.9,33" /><polygon points="319 37.5 332.4 112.6 333.2 112.6 374.5 37.5 401.3 37.5 340 142.4 316.2 142.4 292.6 37.5 319 37.5" /><path d="M472.4,83c0-15.1-8.1-24.9-22.5-24.9s-35.7,18.7-35.7,38.9,8.3,25.1,22.9,25.1c18.9.2,35.3-18.5,35.3-39.1M388.9,100.2c0-34,28.1-64.4,64-64.4s44.8,18.5,44.8,44-27.8,64.6-64,64.6-44.8-18.5-44.8-44.2" /><path d="M54,122.2c-14.3,0-22.7-10-22.7-25.1s16.8-38.9,35.7-38.9,22.7,9.8,22.7,24.9c-.4,20.4-16.8,39.1-35.7,39.1M70.1,35.9c-11.1,0-21.3,2.8-30.4,7.7L47,2.3h-24.5L1.9,117.3c4.5,1.9,8.5,4.9,11.5,8.7.8.8,1.3,1.7,1.9,2.6,2.3,2.8,4.9,5.1,7.7,7.4,7.4,5.3,16.8,8.5,27.8,8.5,36.3,0,63.8-30.2,63.8-64.6s-17.9-44-44.6-44" /></g></svg></a>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          <p>© 2026 Bravo Technology Inc. All Rights Reserved.</p>
+          <p>Usage of merchant logos are authorized by merchant agreement used under license.</p>
+        </div>
+        <ul class="footer-social"><li><a href="https://www.instagram.com/bravo_rewards_ca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a></li><li><a href="https://www.linkedin.com/company/bravoup/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a></li><li><a href="https://www.facebook.com/bravorewardscanada/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li></ul>
+      </div>
     </div>
   </footer>
 
   <button class="cart-bar" type="button" hidden data-cart-bar data-open-cart></button>
   <dialog class="drawer" aria-labelledby="cart-title" data-drawer></dialog>
+  <dialog class="modal" aria-labelledby="auth-title" data-auth-dialog></dialog>
 
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
