@@ -317,10 +317,10 @@ const linesHtml = () => cartLines().map(({ item: i, n }) => `
 function totalsHtml() {
   const t = totals()
   return `
-    <div><span>Subtotal</span><span>${money(t.subtotal)}</span></div>
+    <div><span>Subtotal</span><span class="line-price">${t.savings ? `<s>${money(t.subtotal + t.savings)}</s>` : ''}<b>${money(t.subtotal)}</b></span></div>
     <div><span>GST (5%)</span><span>${money(t.tax)}</span></div>
     <div class="total"><span>Total</span><span>${money(t.total)}</span></div>
-    ${t.savings ? `<p class="open">You're saving ${money(t.savings)} with pickup</p>` : ''}`
+    ${t.savings ? `<p class="open">Saved: ${money(t.savings)}</p>` : ''}`
 }
 
 function renderDrawer() {
