@@ -205,9 +205,8 @@ function renderStore() {
           <h1>${esc(s.name)}</h1>
           <p class="store-address">${esc(fullAddress(s))}</p>
           <p>Online ordering hours: ${hoursToday(s)}</p>
-          <div class="ready-box"><b>${s.ready} min</b><span>ready for pickup</span></div>
         </div>
-        <span class="mode-pill">Pickup</span>
+        <div class="ready-box"><b>${s.ready} min</b><span>ready for pickup</span></div>
       </div>
 
       <section class="section" style="padding-bottom: 0" aria-labelledby="featured">

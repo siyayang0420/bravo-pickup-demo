@@ -235,10 +235,9 @@ h1, h2, h3, p { margin: 0; }
 .store-info { flex: 1 1 320px; min-width: 0; font-size: 16px; line-height: 24px; }
 .store-info h1 { font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: -0.01em; }
 .store-address { margin-top: 12px; }
-.ready-box { display: flex; flex-direction: column; align-items: center; max-width: 350px; margin-top: 16px; padding: 12px 16px; border: 1px solid var(--n200); border-radius: 12px; }
+.ready-box { display: flex; flex-direction: column; align-items: center; flex: 0 1 240px; padding: 12px 16px; border: 1px solid var(--n200); border-radius: 12px; }
 .ready-box b { font-weight: 600; }
 .ready-box span { font-size: 12px; line-height: 16px; color: var(--n600); }
-.mode-pill { display: inline-flex; align-items: center; height: 36px; padding: 0 16px; border-radius: 999px; background: var(--ink); color: var(--white); font-size: 14px; font-weight: 600; }
 .open { color: var(--success-500); }
 
 .cat-nav {
