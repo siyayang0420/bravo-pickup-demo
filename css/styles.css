@@ -55,15 +55,22 @@ h1, h2, h3, p { margin: 0; }
   position: sticky; top: 0; z-index: 40;
   height: var(--nav-h);
   background: var(--white);
-  transition: background-color 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1), backdrop-filter 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: background-color 0.3s cubic-bezier(0.22, 1, 0.36, 1), backdrop-filter 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
-/* frosted once the page scrolls under it, like bravoup.ca's nav */
+/* frosted once the page scrolls under it; instead of a hard edge, a blurred white fade hangs below */
 .nav.scrolled {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(32, 32, 32, 0.08);
 }
-@media (prefers-reduced-motion: reduce) { .nav { transition: none; } }
+.nav::after, .cat-nav::after {
+  content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 20px; pointer-events: none;
+  background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  -webkit-mask-image: linear-gradient(#000, transparent); mask-image: linear-gradient(#000, transparent);
+  opacity: 0; transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav.scrolled::after, .cat-nav.stuck::after { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .nav, .nav::after, .cat-nav::after { transition: none; } }
 .nav .container { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .nav-brand:hover { opacity: 0.8; }
@@ -247,7 +254,7 @@ h1, h2, h3, p { margin: 0; }
 .open { color: var(--success-500); }
 
 .cat-nav {
-  position: sticky; top: var(--nav-h); z-index: 30;
+  position: sticky; top: var(--nav-h); z-index: 41; /* above the nav's fade, so the chips stay sharp */
   margin-top: 32px; background: var(--white);
 }
 .cat-nav .chips { margin-top: 0; padding-top: 10px; padding-bottom: 10px; }

@@ -467,7 +467,12 @@ drawer.addEventListener('submit', (e) => {
 })
 
 const nav = $('.nav')
-const onScroll = () => nav.classList.toggle('scrolled', scrollY > 0)
+const onScroll = () => {
+  nav.classList.toggle('scrolled', scrollY > 0)
+  // the menu's section bar gets the same soft edge once it sticks under the nav
+  const bar = $('.cat-nav')
+  if (bar) bar.classList.toggle('stuck', bar.getBoundingClientRect().top <= nav.offsetHeight + 1)
+}
 addEventListener('scroll', onScroll, { passive: true })
 onScroll()
 
