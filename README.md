@@ -21,7 +21,7 @@ Then go to http://localhost:4300. Photos load from Bravo's S3 bucket, so you nee
 | `index.html` | Hero with search, a "Most liked for pickup" row (each restaurant's #1 dish), how pickup works, and the 20 restaurants with cuisine filters |
 | `restaurant.html?id={store id}` | Photos, address, today's ordering hours, ready time and a Pickup label, the "Featured items" row, and the full menu by section, with a sticky section bar |
 | Sign In / Sign Up (both pages) | A dialog with email and password, or name, email and password to sign up. Placing an order needs an account. |
-| Cart drawer (both pages) | Opened from the Yolk cart button in the nav. Quantities, pickup time (as soon as it's ready, or a 15-minute slot today), name, payment (Bravo Dining Gift Card or pay at the counter), subtotal, GST and total |
+| Cart drawer (both pages) | Opened from the Yolk cart button in the nav. Quantities, pickup time (as soon as it's ready, or a 15-minute slot today), name, payment (Bravo Dining Gift Card, or credit card through Stripe with the Visa, Mastercard and Amex icons from bravoup.ca), subtotal, GST and total |
 
 The dish cards follow the Figma frame "Featured items" (Bravo – Website, node 6243:314): 151.67 × 153 photo with 10px corners, a "#n Most liked" badge and a white "+" button inset 6px, name in 16px semibold, the regular price struck through in 12px grey next to the pickup price in 14px semibold. Two small departures: the two prices have a 4px gap and share a baseline (in the frame they touch), and the cards widen to 200px from 768px up. Once a dish is in the cart, its "+" becomes a "− n +" stepper.
 

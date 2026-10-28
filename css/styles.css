@@ -289,7 +289,10 @@ body.has-cart .footer-inner { padding-bottom: 88px; } /* room for the cart bar *
 .cart-line > img { width: 48px; height: 48px; border-radius: 8px; object-fit: cover; }
 .cart-line .grow { flex: 1; min-width: 0; }
 .cart-line .grow p:first-child { font-weight: 600; }
-.cart-line .grow p:last-child { color: var(--n500); }
+.line-price { display: flex; align-items: baseline; gap: 4px; }
+.line-price b { font-weight: 500; }
+.line-price s { font-size: 12px; color: var(--n500); }
+.line-save { font-size: 12px; line-height: 16px; font-weight: 500; }
 .stepper { display: grid; grid-template-columns: 32px 24px 32px; align-items: center; border-radius: 999px; background: var(--n100); }
 .stepper button { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 999px; background: transparent; }
 .stepper button:hover { background: var(--n200); }
@@ -306,6 +309,9 @@ fieldset.field { border: 0; margin: 24px 0 0; padding: 0; min-width: 0; }
 .radio input { flex: none; accent-color: var(--ink); width: 20px; height: 20px; margin: 0; }
 .radio > span { font-weight: 600; line-height: 20px; }
 .radio small { display: block; margin-top: 2px; color: var(--n500); font-size: 12px; line-height: 16px; font-weight: 400; }
+.radio .pay-methods { display: flex; align-items: center; gap: 4px; margin-top: 4px; }
+.pay-methods img { height: 20px; width: auto; }
+.pay-logo { flex: none; margin-left: auto; }
 .totals { display: grid; gap: 4px; }
 .totals div { display: flex; justify-content: space-between; }
 .totals .total { font-size: 16px; font-weight: 600; }

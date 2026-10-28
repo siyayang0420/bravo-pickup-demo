@@ -12,6 +12,9 @@ const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches
 const PLUS = '<img src="assets/icons/plus.svg" alt="" width="20" height="20">'
 const MINUS = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.16667 10H15.8333" stroke="#202020" stroke-width="1.5" stroke-linecap="round"/></svg>'
+// card icons shown on bravoup.ca's gift card checkout
+const CARDS = [['Visa', 'visa'], ['Mastercard', 'mastercard'], ['American Express', 'amex']]
+  .map(([label, f]) => `<img src="assets/pay/${f}_icon.svg" alt="${label}" title="${label}" width="29" height="20">`).join('')
 const CLOSE = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>'
 
 // localStorage can be missing or blocked (private windows); the page works without it
@@ -299,7 +302,11 @@ function renderCart() {
 const linesHtml = () => cartLines().map(({ item: i, n }) => `
   <div class="cart-line">
     ${i.image ? dishImg(i, 48, 48) : ''}
-    <div class="grow"><p>${esc(i.name)}</p><p>${money(unit(i) * n)}</p></div>
+    <div class="grow">
+      <p>${esc(i.name)}</p>
+      <p class="line-price"><b>${money(unit(i) * n)}</b>${i.pickup ? `<s>${money(i.price * n)}</s>` : ''}</p>
+      ${i.pickup ? `<p class="open line-save">You save ${money((i.price - i.pickup) * n)}</p>` : ''}
+    </div>
     <div class="stepper">
       <button type="button" data-step="${i.id}:-1" aria-label="Remove one ${esc(i.name)}">${MINUS}</button>
       <span aria-label="Quantity">${n}</span>
@@ -327,7 +334,7 @@ function renderDrawer() {
         <p>${esc(placed.store.name)} is preparing your order.</p>
         <span class="code">${placed.code}</span>
         <p>Pickup ${esc(placed.time)} at ${esc(fullAddress(placed.store))}. Show this code at the counter.</p>
-        <p>${placed.pay === 'giftcard' ? `${money(placed.total)} will be paid from your Bravo Dining Gift Card.` : `Pay ${money(placed.total)} at the counter.`}</p>
+        <p>${placed.pay === 'giftcard' ? `${money(placed.total)} will be paid from your Bravo Dining Gift Card.` : `${money(placed.total)} will be charged to your card through Stripe.`}</p>
         <p><small>This is a demo. No order was sent to the restaurant.</small></p>
       </div></div>
       <div class="drawer-foot"><button class="btn btn-block" type="button" data-close>Done</button></div>`
@@ -358,7 +365,7 @@ function renderDrawer() {
         <fieldset class="field">
           <legend>Payment</legend>
           <label class="radio"><input type="radio" name="pay" value="giftcard" checked><span>Bravo Dining Gift Card<small>Pay from your card balance</small></span></label>
-          <label class="radio"><input type="radio" name="pay" value="counter"><span>Pay at the counter<small>Card or cash when you pick up</small></span></label>
+          <label class="radio"><input type="radio" name="pay" value="card"><span>Credit card<small class="pay-methods">${CARDS}<span title="Additional payment methods via Stripe">+ more</span></small></span><img class="pay-logo" src="assets/pay/stripe-logo.svg" alt="Stripe" width="41" height="17"></label>
         </fieldset>
       </div>
       <div class="drawer-foot">
