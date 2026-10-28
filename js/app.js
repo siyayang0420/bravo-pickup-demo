@@ -87,7 +87,6 @@ const fullAddress = (s) => {
   const a = s.address.toLowerCase().includes(s.city.toLowerCase().replace('downtown ', '')) ? s.address : `${s.address}, ${s.city}`
   return /\bBC\b/.test(a) ? a : `${a}, BC`
 }
-const STORE_ICON = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 8.5V16h13V8.5M2.5 4h15l.75 3a2.25 2.25 0 0 1-4.5.25 2.25 2.25 0 0 1-4.5 0 2.25 2.25 0 0 1-4.5-.25L5 4" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 16v-4h4v4" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>'
 
 function initCarousel(root) {
   const track = $('[data-track]', root)
@@ -201,14 +200,11 @@ function renderStore() {
       <div class="store-head">
         <div class="store-info">
           <h1>${esc(s.name)}</h1>
-          <p class="store-address">${STORE_ICON}${esc(fullAddress(s))}</p>
+          <p class="store-address">${esc(fullAddress(s))}</p>
           <p>Online ordering hours: ${hoursToday(s)}</p>
           <div class="ready-box"><b>${s.ready} min</b><span>ready for pickup</span></div>
         </div>
-        <div class="mode-toggle" role="group" aria-label="Order type">
-          <button type="button" aria-disabled="true" title="Delivery isn't available yet">Delivery</button>
-          <button type="button" aria-pressed="true">Pickup</button>
-        </div>
+        <span class="mode-pill">Pickup</span>
       </div>
 
       <section class="section" style="padding-bottom: 0" aria-labelledby="featured">

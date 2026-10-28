@@ -19,7 +19,7 @@ Then go to http://localhost:4300. Photos load from Bravo's S3 bucket, so you nee
 | Page | What it shows |
 |---|---|
 | `index.html` | Hero with search, a "Most liked for pickup" row (each restaurant's #1 dish), how pickup works, and the 20 restaurants with cuisine filters |
-| `restaurant.html?id={store id}` | Photos, address, today's ordering hours, ready time and a Delivery / Pickup switch (Delivery isn't available), the "Featured items" row, and the full menu by section, with a sticky section bar |
+| `restaurant.html?id={store id}` | Photos, address, today's ordering hours, ready time and a Pickup label, the "Featured items" row, and the full menu by section, with a sticky section bar |
 | Sign In / Sign Up (both pages) | A dialog with email and password, or name, email and password to sign up. Placing an order needs an account. |
 | Cart drawer (both pages) | Opened from the Yolk cart button in the nav. Quantities, pickup time (as soon as it's ready, or a 15-minute slot today), name, payment (Bravo Dining Gift Card or pay at the counter), subtotal, GST and total |
 
