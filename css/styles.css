@@ -246,6 +246,7 @@ h1, h2, h3, p { margin: 0; }
 }
 .cat-nav .chips { margin-top: 0; padding-top: 10px; padding-bottom: 10px; }
 .menu-cat { padding-top: 32px; scroll-margin-top: calc(var(--nav-h) + 64px); }
+.menu-cat:first-child { padding-top: 12px; }
 .menu-cat h2 { font-size: 20px; line-height: 28px; font-weight: 600; }
 .menu-list { display: grid; margin-top: 8px; }
 @media (min-width: 768px) { .menu-list { grid-template-columns: 1fr 1fr; column-gap: 32px; } }
