@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order for Pickup | Bravo</title>
+  <meta name="description" content="Order ahead for pickup from a Bravo restaurant in Metro Vancouver.">
+  <link rel="preload" href="assets/fonts/FTRegolaNeue-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="store">
+  <header class="nav">
+    <div class="container">
+      <a class="nav-brand" href="index.html" aria-label="Bravo pickup home">
+        <img src="assets/logo-bravo.svg" alt="bravo" width="87.4" height="26">
+        <span class="nav-tag">Pickup</span>
+      </a>
+      <button class="btn-ghost" type="button" data-open-cart>Cart <span class="cart-count" data-cart-count></span></button>
+    </div>
+  </header>
+
+  <main data-store-page>
+    <div class="container">
+      <a class="back" href="index.html#restaurants">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M12.5 15 7.5 10l5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All restaurants
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>A demo of pickup ordering for <a href="https://www.bravoup.ca">Bravo</a>. Restaurants, ratings and dish photos come from Bravo's catalog; the rest of each menu, prices, pickup times and the order flow are made up. No orders are sent.</p>
+    </div>
+  </footer>
+
+  <button class="cart-bar" type="button" hidden data-cart-bar data-open-cart></button>
+  <dialog class="drawer" aria-labelledby="cart-title" data-drawer></dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

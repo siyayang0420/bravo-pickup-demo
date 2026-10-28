@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pickup-demo",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4300", "-d", "/Users/siyayang/bravo-pickup-demo"],
+      "port": 4300
+    }
+  ]
+}

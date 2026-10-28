@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Ahead for Pickup | Bravo</title>
+  <meta name="description" content="Order ahead from 20 Bravo restaurants across Metro Vancouver and pick it up hot. Featured dishes are 20% off for pickup.">
+  <link rel="preload" href="assets/fonts/FTRegolaNeue-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+  <header class="nav">
+    <div class="container">
+      <a class="nav-brand" href="index.html" aria-label="Bravo pickup home">
+        <img src="assets/logo-bravo.svg" alt="bravo" width="87.4" height="26">
+        <span class="nav-tag">Pickup</span>
+      </a>
+      <button class="btn-ghost" type="button" data-open-cart>Cart <span class="cart-count" data-cart-count></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="hero-kicker"><span>New</span> Pickup orders on Bravo</p>
+          <h1>Order ahead.<br>Skip the line.</h1>
+          <p class="hero-lede">Choose your dishes from 20 restaurants across Metro Vancouver, pick a time, and collect it hot at the counter. Featured dishes are 20% off when you pick up.</p>
+          <label class="search">
+            <span class="sr-only">Search restaurants or dishes</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.5"/><path d="m13.5 13.5 3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <input type="search" placeholder="Search a restaurant or dish" autocomplete="off" data-search>
+          </label>
+        </div>
+        <div class="hero-art" data-hero-art aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="most-liked">
+      <div class="dish-row" data-carousel>
+        <div class="dish-row-head">
+          <div class="dish-row-title">
+            <h2 id="most-liked">Most liked for pickup</h2>
+            <p>The <b>#1</b> dish at each restaurant</p>
+          </div>
+          <div class="dish-row-nav">
+            <button class="round-btn" type="button" data-prev aria-label="Previous dishes"><img class="on flip" src="assets/icons/chevron-right.svg" alt="" width="20" height="20"><img class="off" src="assets/icons/chevron-left.svg" alt="" width="20" height="20"></button>
+            <button class="round-btn" type="button" data-next aria-label="More dishes"><img class="on" src="assets/icons/chevron-right.svg" alt="" width="20" height="20"><img class="off flip" src="assets/icons/chevron-left.svg" alt="" width="20" height="20"></button>
+          </div>
+        </div>
+        <div class="dish-track hide-scrollbar" data-track data-top-dishes></div>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="how">
+      <h2 class="section-title" id="how">How pickup works</h2>
+      <div class="steps">
+        <div class="step"><span class="step-n">1</span><div><h3>Choose your dishes</h3><p>Browse menus from 20 Bravo restaurants and add what you want.</p></div></div>
+        <div class="step"><span class="step-n">2</span><div><h3>Pick a time</h3><p>As soon as it's ready, or later today. Pay with your Bravo Dining Gift Card.</p></div></div>
+        <div class="step"><span class="step-n">3</span><div><h3>Grab it at the counter</h3><p>Show your pickup code. No waiting in line, no delivery fees.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="restaurants">
+      <h2 class="section-title" id="restaurants">Restaurants for pickup</h2>
+      <p class="section-sub" data-store-count></p>
+      <div class="chips hide-scrollbar" role="group" aria-label="Filter by cuisine" data-chips></div>
+      <div class="store-grid" data-store-grid></div>
+      <p class="empty" hidden data-empty>No restaurants match that search.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>A demo of pickup ordering for <a href="https://www.bravoup.ca">Bravo</a>. Restaurants, ratings and dish photos come from Bravo's catalog; the rest of each menu, prices, pickup times and the order flow are made up. No orders are sent.</p>
+    </div>
+  </footer>
+
+  <button class="cart-bar" type="button" hidden data-cart-bar data-open-cart></button>
+  <dialog class="drawer" aria-labelledby="cart-title" data-drawer></dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

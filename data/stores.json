@@ -1,0 +1,1723 @@
+[
+ {
+  "id": 32,
+  "name": "Meetrice Noodle Burnaby",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/fffcd761d6942dcbe1cb058140928461.webp",
+  "cuisine": "Chinese",
+  "city": "Burnaby",
+  "address": "5226 Kingsway",
+  "rating": 4.718,
+  "rating_count": 39,
+  "average_price": 1800,
+  "tags": [
+   "Yunnan / spicy rice noodles",
+   "Soup & combo meals",
+   "Large comfortable portions"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/2668fba4f9eb20abc1ef3a31167005bb.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/6250b0b6e1ccdea1547be4c99f932299.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/2cc75df1ba197f2978fb810ab9f79002.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/8165516c0ffdc62446ee73ab20384ade.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/bef9628c29a3f41fecf2f05f471cdf1a.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Sichuan Pepper Chicken Rice Noodles",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/eabbbf2721f1346778fc02a5179e3527.webp"
+   },
+   {
+    "name": "Pork Tripe Rice Noodles",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/3d28819c527ddbfff8464db313cba11a.webp"
+   },
+   {
+    "name": "Three-Item Braised Platter",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/37cac79005e028aeb15a3ffc3c17fa1e.webp"
+   },
+   {
+    "name": "Beef Rice Bowl",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/9412c3b54681cd64b500e7abe79206d5.webp"
+   },
+   {
+    "name": "Taiwanese Popcorn Chicken",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a42797d5cbb120beec69c6dde3e24b9e.webp"
+   },
+   {
+    "name": "Brown Sugar Glutinous Rice Cakes",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/54ed2231c708edeec8d5e5f4722a510c.webp"
+   }
+  ]
+ },
+ {
+  "id": 36,
+  "name": "Beijing Hot Pot",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/9c5adf52dc58ed67b6adb3636bd884bb.webp",
+  "cuisine": "Hot Pot",
+  "city": "Richmond",
+  "address": "60-8251 Westminster Hwy",
+  "rating": 4.852,
+  "rating_count": 102,
+  "average_price": 2500,
+  "tags": [
+   "Cloisonné copper hot pot",
+   "Value combos",
+   "Fresh ingredients"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "11:30 - 14:30",
+     "17:00 - 22:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "11:30 - 14:30",
+     "17:00 - 22:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "11:30 - 14:30",
+     "17:00 - 22:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "11:30 - 14:30",
+     "17:00 - 22:00"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "11:30 - 14:30",
+     "17:00 - 22:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/6f30fbc10774685d75c20508f7357bab.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/18320bf69e6bb2ccf53d86bc4e1c3e5d.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/16e918347b082dc1287aa848f651815d.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/18320bf69e6bb2ccf53d86bc4e1c3e5d.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/16e918347b082dc1287aa848f651815d.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Assorted Lamb Platter",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/18320bf69e6bb2ccf53d86bc4e1c3e5d.webp"
+   },
+   {
+    "name": "Tender Lamb Loin",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/16e918347b082dc1287aa848f651815d.webp"
+   },
+   {
+    "name": "Spicy Dry Pot",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/571d9a974711149322d220eb2903d578.webp"
+   },
+   {
+    "name": "Beijing-Style Glass Noodles",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/610eea71ecb8218b194e7ccc21506d84.webp"
+   },
+   {
+    "name": "Lamb Siu Mai",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d5ae88e89baa6fc7b338c0b8ee63c0d4.webp"
+   },
+   {
+    "name": "Premium Snowflake Fatty Beef",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/f94acf61bcb51603c047c5434b807361.webp"
+   },
+   {
+    "name": "Beijing Lamb Roll",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/0973cbcf6288a61a034a9e6a4fb08642.webp"
+   }
+  ]
+ },
+ {
+  "id": 48,
+  "name": "IPOH Malaysian Cuisine",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d1a18920150518bba2b325d6039daf41.webp",
+  "cuisine": "South Asian",
+  "city": "Burnaby",
+  "address": "2127-4500 Kingsway",
+  "rating": 4.651,
+  "rating_count": 21,
+  "average_price": 1500,
+  "tags": [
+   "Malaysian street food",
+   "Food court eatery",
+   "Coconut & spice dishes"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "11:00 - 19:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "11:00 - 19:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "11:00 - 19:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "11:00 - 19:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": []
+   },
+   {
+    "day": 1,
+    "hours": [
+     "11:00 - 19:00"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "11:00 - 19:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/41ceee0934c5c8479f69a92732c8a3ad.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/75cd7fc468d906aedec6b5a6100a0a7d.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/61a0f38de165cc6ff5b4859051e64be2.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/f5e1448e756d8955be9d203712c32125.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/916cf94d64d7f610e63632fd9c208e50.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Hainanese Chicken Laksa",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d667b607953ce5ba00f9b883d2eafddf.webp"
+   },
+   {
+    "name": "Roast Chicken with Rice",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/7abbddfdd598864ded2b3dc80a3782c0.webp"
+   },
+   {
+    "name": "Penang Char Kway Teow",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/14a368da3629e3ef2c7b71a0c19513db.webp"
+   },
+   {
+    "name": "White-Cut Chicken Rice",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a3b07adc3090f89d2498a79b72f458fe.webp"
+   },
+   {
+    "name": "Malaysian Roti with Curry Beef Brisket",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/33b342df61f91c78f396efeacfafa464.webp"
+   }
+  ]
+ },
+ {
+  "id": 52,
+  "name": "Fortune Terrace Chinese Cuisine",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/99d28f0dcd2d42b83ca90d1574c52d1c.webp",
+  "cuisine": "Dim Sum",
+  "city": "Richmond",
+  "address": "130 6200 River Road",
+  "rating": 4.766,
+  "rating_count": 20,
+  "average_price": 3500,
+  "tags": [
+   "Cantonese dim sum & banquet",
+   "Seafood specialty",
+   "Elegant event space"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/f5ad0600fb644a5f867fb971636c9164.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/fbbe2df7b53ea2b99b2e639311764e79.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/02e8023e94c4c9aa908cb7c19aa22c51.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/c574ea88b33635f854e953b68d74f44d.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/db131f801bcbb888736796d1bc7947ad.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Steamed Chicken Feet with Guilin Lily Sauce",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/6938b2c313eaee6cca6bdf4687d35001.webp"
+   },
+   {
+    "name": "Century Egg and Lean Pork Porridge",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d2a50365e7309e39ae4c4878ecde058e.webp"
+   },
+   {
+    "name": "Exquisite dim sum",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/c574ea88b33635f854e953b68d74f44d.webp"
+   },
+   {
+    "name": "Fu Man Lou Fish, Shrimp and Crab Fried Rice",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/36e69cc7b726b99327a4a37d2cbb11e7.webp"
+   },
+   {
+    "name": "Shrimp Rice Roll",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/b4a7b7c08cef3d547abc9dfed387a59a.webp"
+   }
+  ]
+ },
+ {
+  "id": 55,
+  "name": "TOKU Japanese Restaurant",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/3eff8e631c33943ab4a56818ae4fcf96.webp",
+  "cuisine": "Japanese & Sushi",
+  "city": "Richmond",
+  "address": "221-5300 No. 3 Rd",
+  "rating": 4.786,
+  "rating_count": 14,
+  "average_price": 2000,
+  "tags": [
+   "Japanese fusion & sushi",
+   "Hotpot & robata",
+   "Family-friendly dining"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "11:00 - 15:00",
+     "16:30 - 21:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "11:00 - 15:00",
+     "16:30 - 21:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "11:00 - 15:00",
+     "16:30 - 21:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "11:00 - 15:00",
+     "16:30 - 21:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "11:00 - 15:00",
+     "16:30 - 21:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "11:00 - 15:00",
+     "16:30 - 21:00"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "11:00 - 15:00",
+     "16:30 - 21:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a1a85245edc77be94c235e8ed27a8c81.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/42ffab038e56f42ea7c77a76bc775bfd.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/c91f81aa35c83edadeba303b3f589377.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/46f15d0bac5aa61bd50cbadf53f62d93.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d7397d51602b3c1deacdef662c83510f.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Fresh oysters",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/716ae108263effe2dd0eecdbe6db4182.webp"
+   },
+   {
+    "name": "Grilled squid",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d8dd6b1d125ebe76f5a1c237e92da451.webp"
+   },
+   {
+    "name": "Fried tempura",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/c17dec3b067a669670fad33c74061b95.webp"
+   },
+   {
+    "name": "bento box",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/2142035abfc9fa97961852c013dede35.webp"
+   },
+   {
+    "name": "Red Tornado",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/adbe9763d61caac2f4bd788dee9e28e5.webp"
+   }
+  ]
+ },
+ {
+  "id": 73,
+  "name": "AJEA NOODLE",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/8e43d924392c88127577c4452cd168c0.webp",
+  "cuisine": "Szechuan Spicy",
+  "city": "Richmond",
+  "address": "3700 NO. 3 Road",
+  "rating": 4.794,
+  "rating_count": 62,
+  "average_price": 1500,
+  "tags": [
+   "Sichuan & spicy noodles",
+   "Clay pot rice",
+   "Customizable bowls"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "11:00 - 20:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "11:00 - 20:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "11:00 - 20:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "11:00 - 20:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "11:00 - 16:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": []
+   },
+   {
+    "day": 2,
+    "hours": [
+     "11:00 - 20:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/f43b45f768d5a16e9c22802a64f0b529.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a088cb53876a6bbea3c86a3a70f3d60b.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/6b2168a4c0313b3927f98d6e348f71c1.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/69e8d26e50b8b9bb8d28cb1a8c5fc003.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/db603ddb54e81ff09262edc768c1be6d.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Chongqing noodles",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/fa647a018ca5051d190f3c9896d1d2e0.webp"
+   },
+   {
+    "name": "Sichuan-style cured meat clay pot rice",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/85ec3dffe98321961eae5646c3cca41f.webp"
+   },
+   {
+    "name": "Clay Pot Rice with Chicken and Spare Ribs",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/3f404324d6edd6a951836b69e1ceee4e.webp"
+   },
+   {
+    "name": "Cantonese clay pot rice",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/9760e0d4fe05b011584510cc77f3b8be.webp"
+   },
+   {
+    "name": "Clay Pot Rice with Chicken and Chinese Sausage",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/64d3aae112edcbd211ed2fb295633ac1.webp"
+   }
+  ]
+ },
+ {
+  "id": 104,
+  "name": "Crystal Cafe",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/2a2b029279b7813401c9052950bcf248.webp",
+  "cuisine": "Chinese",
+  "city": "Burnaby",
+  "address": "2130 - 4500 Kingsway",
+  "rating": 4.76,
+  "rating_count": 74,
+  "average_price": 1800,
+  "tags": [
+   "Cha chaan teng classics",
+   "Full-day breakfast",
+   "Value set meals"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "08:30 - 19:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "08:30 - 19:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "08:30 - 19:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "08:30 - 19:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "08:30 - 19:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "08:30 - 19:00"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "08:30 - 19:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a25d677850adf8b3b8946857fa16c448.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/7731ae95b3dfc1ab886fc2dbc2c5df4d.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/756e7d8428da9aa285392f260551cba9.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/befd2ac0708686c78a8265063fe042c2.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/fdc1b375b0e9b2aa4dec1a90675e90f8.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Baked Pork Chop Rice",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/0bea15d5d118a4cd3325bf5c0dcc66d9.webp"
+   },
+   {
+    "name": "Egg Sandwich",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/425e6653d2c3a8e8044b26cbe52d655f.webp"
+   },
+   {
+    "name": "Dry Fried Beef Noodles",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/4b4f7de23c67dafe38e96dce74e85a76.webp"
+   },
+   {
+    "name": "fried rice",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/8703701918fed70a8712a6e0a0172c9c.webp"
+   },
+   {
+    "name": "Chicken Chow Mein",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/728bfcdb4ae567cc175dc5dd91bd9f59.webp"
+   }
+  ]
+ },
+ {
+  "id": 117,
+  "name": "The First Dessert",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/aef53ffb1dbdd6ff3a7d5b3734470f4a.webp",
+  "cuisine": "Dessert",
+  "city": "Vancouver",
+  "address": "5857 Victoria Dr, Vancouver, BC V5P 3W5",
+  "rating": 4.9,
+  "rating_count": 20,
+  "average_price": 800,
+  "tags": [
+   "Cantonese dessert shop",
+   "Over 50 menus",
+   "Cozy dessert vibes"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "15:00 - 23:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "15:00 - 23:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "15:00 - 23:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "14:00 - 23:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "14:00 - 23:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "15:00 - 23:00"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "15:00 - 23:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/f091ba846b3a32567af644f1e0d14ec7.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/1de0f52a5bf66a2424e00fe464aa67b5.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/6a187b2ced2d0a5bf77d9e1e841feaf2.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/b23e079ba401b92909fde68467119260.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/e6ed08a3321a47a5561eace8868bd12e.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Steamed Fish Siu Mai",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/5bec5ed0127d7d64d094989fa406984d.webp"
+   },
+   {
+    "name": "Rice Noodle Rolls with Mixed Sauce",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/52dfccc3b6695878af85a3a5c2b0fcf4.webp"
+   },
+   {
+    "name": "Thai-Style Grass Jelly with Mixed Jelly and Coconut Jelly",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/2925eeac5a5d02e7fe06459acc18d321.webp"
+   },
+   {
+    "name": "Curry Fish Ball",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/5091de376bc654ea072242d09015fa37.webp"
+   },
+   {
+    "name": "Silky Steamed Milk Pudding",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/5abcb9cbfb964115718e6d84d5ab752f.webp"
+   }
+  ]
+ },
+ {
+  "id": 120,
+  "name": "Old Xian's Food Burnaby",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d7aa028e2457ef4694b27efd844edb65.webp",
+  "cuisine": "Chinese",
+  "city": "Burnaby",
+  "address": "2133-4500 Kingsway, Burnaby, BC V5H 2B1",
+  "rating": 4.722,
+  "rating_count": 42,
+  "average_price": 1800,
+  "tags": [
+   "Xi’an street food",
+   "Hand-pulled & wide noodles",
+   "Bold, spicy comfort"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "11:00 - 19:15"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "11:00 - 19:15"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "11:00 - 19:15"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "11:00 - 19:15"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "11:00 - 19:15"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "11:00 - 19:15"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "11:00 - 19:15"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/47cf67c61da19383f14bbe62c92cd822.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a1452aa8cd2d23a2d470ed16a9b9205e.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/9a842e077b99abe049024ed60bde5550.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/197588a2ded859c8455fa4b352b8b5d0.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/6f00a1d3239e462c9fdffe06fb0de01d.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Xi'an Liangpi",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/6f00a1d3239e462c9fdffe06fb0de01d.webp"
+   },
+   {
+    "name": "Xi'an Oil-Splashed Noodles",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/bd757d5c499814ad6c5395802a23cf33.webp"
+   },
+   {
+    "name": "Water Basin Lamb",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/26cc8d36b0a7a40ff1ae602a0d22be3a.webp"
+   },
+   {
+    "name": "Cumin Lamb Roujiamo",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/782cba824448bc9836d8f5fc7789e643.webp"
+   },
+   {
+    "name": "Cumin beef noodles",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/42a5dcc2033be2b6c81cdc4266c7dba5.webp"
+   }
+  ]
+ },
+ {
+  "id": 156,
+  "name": "HEY I AM YOGOST CAMBIE",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/9d92da64045538d17e93f9eab5aededf.webp",
+  "cuisine": "Drinks & Bubble Tea",
+  "city": "Richmond",
+  "address": "8181 Cambie Rd, #1140,Richmond, BC V6X 3X9",
+  "rating": 4.988,
+  "rating_count": 26,
+  "average_price": 800,
+  "tags": [],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/0aa4a0682d36a728f36b9c707507be9b.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/95fd4725d48ffae72962e6be2fce3be1.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/806ae81d3af70f5c51f932f2a2b01ea6.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/2ae142c7dcad8fd9f57d8c9af2bbe2e9.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/e4384251529ba5e745cbf2a3b8b2cb19.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Yakult grapes",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/f387c11508eb1240d0abbcef770789dc.webp"
+   },
+   {
+    "name": "Eat rice yogurt",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/35d8d92b05997afe6f8e2e1fd35765da.webp"
+   },
+   {
+    "name": "White peach dumpling yogurt",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/621e2b1615dc88f2e952f70918c31f7d.webp"
+   },
+   {
+    "name": "Strawberry Dumpling Yogurt",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/807b6034d930fb23bbe35ac0f86050b5.webp"
+   },
+   {
+    "name": "Matcha Dango Yogurt",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a180690bc5c12b906d7c026e7cd8425e.webp"
+   }
+  ]
+ },
+ {
+  "id": 281,
+  "name": "La Terrazza",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/cc2a3885185f46c6aa39b6e3633967bd.webp",
+  "cuisine": "Italian",
+  "city": "Downtown Vancouver",
+  "address": "1088 Cambie St, Vancouver, BC V6B 6J5",
+  "rating": 5,
+  "rating_count": 1,
+  "average_price": 5000,
+  "tags": [
+   "Fine Italian",
+   "Wine pairings",
+   "Seasonal & seafood",
+   "Elegant ambience"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "17:00 - 22:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "17:00 - 22:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "17:00 - 22:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "17:00 - 22:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": []
+   },
+   {
+    "day": 1,
+    "hours": []
+   },
+   {
+    "day": 2,
+    "hours": [
+     "17:00 - 22:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d36f31b2093708960e57d4f4197796ea.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/fe4260a7881f9b0ff4b7c9b5ef124d28.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/56a5586c9c08d47fb3cadc78a1c7c666.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/38210bab55466f9c8e5d6a6d4397962d.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/3ed41ecfbf65bdb4f50ff889a2720279.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Sablefish",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/28a5e95bf9031d4eb7cdb296137e53e5.webp"
+   },
+   {
+    "name": "Veggie lasagna",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/29959afa2b83d7c098b7291d50016967.webp"
+   },
+   {
+    "name": "Rack of lamb",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/778f15f095d747b9c29cd7759e79e1e7.webp"
+   },
+   {
+    "name": "Beef tartare",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/c3fc4ac0df6e28e2adb790bf22cbab9b.webp"
+   },
+   {
+    "name": "Crab Cakes",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/19d8061b762d8255f803d791cd5dcc0c.webp"
+   },
+   {
+    "name": "Calamari",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/cff27ec9927997c1faec0263945f84f1.webp"
+   }
+  ]
+ },
+ {
+  "id": 344,
+  "name": "P2P indian restaurant Yaletown",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/20d51764a0569f00422cedfaf7074f27.webp",
+  "cuisine": "Indian",
+  "city": "Downtown Vancouver",
+  "address": "1257 Hamilton St, Vancouver, BC V6B 6K3",
+  "rating": 5,
+  "rating_count": 1,
+  "average_price": 2500,
+  "tags": [
+   "Indian-Italian fusion",
+   "Bold & playful menu",
+   "Group / casual friendly"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "09:30 - 01:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "09:30 - 01:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "09:30 - 02:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "09:30 - 02:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "09:30 - 01:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "09:30 - 01:00"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "09:30 - 01:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/fac43a47fad3e67ebef6efe2b8ba29e3.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/7248baa587e51c06a8f576bcbee6718b.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/85185540955c60fa1a10d1721dfab8e6.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/f11aa0333f6fe7d022e85d1e0d761c51.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/9b9750a2019b589462de0db0c22986bf.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Lamb Vindaloo Spaghetti",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/b27ea91035a4371b06e603bea4b16e2a.webp"
+   },
+   {
+    "name": "Coconut Prawn Curry",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/2996afd6730f270c89c9ffbcec5208a6.webp"
+   },
+   {
+    "name": "Kadai Paneer",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/8617d539228ba066ed2517ac060d157c.webp"
+   },
+   {
+    "name": "Dahi puri",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/b1ac8425a3487c7f9c1c8df0ebf0ad8f.webp"
+   },
+   {
+    "name": "Panner Pakora Chaat",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/7248baa587e51c06a8f576bcbee6718b.webp"
+   },
+   {
+    "name": "Calamari",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/dbaad33839d0b9f21589cfcde18d4522.webp"
+   },
+   {
+    "name": "Tiramisu",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/cf13d63592e69385470cd9e0ff717054.webp"
+   },
+   {
+    "name": "Butter Chicken Nachos",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/e5177320fe8cc307c12bc9fd73ae2971.webp"
+   },
+   {
+    "name": "Egg Bhurji",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/f4ea931d00d147abf4c20436da60067e.webp"
+   },
+   {
+    "name": "Butter Chicken Rice Bowl",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/b5e6d7a1488a40621d0abfd74db00781.webp"
+   },
+   {
+    "name": "Akora Paneer Chaat",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/9c2f7e08dbeb13370457b10aea77316f.webp"
+   },
+   {
+    "name": "Deluxe Aloo Tikki Burger",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/17a86af1da16328db5ca737ca40beb23.webp"
+   },
+   {
+    "name": "Kinder Shake",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/9c6d8a8f189959591d286e5c86789b47.webp"
+   },
+   {
+    "name": "Mango Majesty",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/aa0a040cef5bd67a78fe5e6e27e3ccc4.webp"
+   },
+   {
+    "name": "Royal Banana Fizz",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/b931a4d607f376887111389b62d3d71f.webp"
+   },
+   {
+    "name": "Espresso Martini",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/81dec16c86caca3d8ce763a819b9e594.webp"
+   }
+  ]
+ },
+ {
+  "id": 428,
+  "name": "Pizza Garden Metrotown",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/da5cd8e101b61d52f920f64a6ae8a25e.webp",
+  "cuisine": "Pizza",
+  "city": "Burnaby",
+  "address": "4464 Beresford St., Burnaby, BC V5H 2Y4",
+  "rating": 0,
+  "rating_count": 0,
+  "average_price": 1000,
+  "tags": [
+   "Artisan pizza",
+   "Neapolitan style",
+   "Casual group spot"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "10:00 - 23:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "10:00 - 23:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "10:00 - 23:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "10:00 - 22:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/18dfe0af2505e1c45aa52fd59d7aca5d.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/2f2ae6ac889830317a0e47622d85b118.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/bc261e31fb2ce1ad1b4a1e7ec55b38e6.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/9277e1a822799c8728dccd409042c710.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/2dd96cc7920d0ae04c681f9e087c898b.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Capicola pizza",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d74fd0a85d225c6bd64a1ce877da99a4.webp"
+   },
+   {
+    "name": "Classico pizza",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/b7fe3e67d8ffe8914a5b1c98de7c41d2.webp"
+   },
+   {
+    "name": "Montebello pizza",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/af30e6b35c2c218f613aba71f983d974.webp"
+   },
+   {
+    "name": "Parma Prosciutto",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d3e7608e6a1a93fba6de35a996ebe23a.webp"
+   },
+   {
+    "name": "Pollo Whiskey BBQ pizza",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/3c27bd2d1c179203af8b4dcde98b3bd7.webp"
+   }
+  ]
+ },
+ {
+  "id": 465,
+  "name": "Blaze Gourmet Burgers",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/605c797e76a8bd07c317e386033b0386.webp",
+  "cuisine": "Burger & Fried Chicken",
+  "city": "Vancouver",
+  "address": "43 E 5th Ave, Vancouver, BC V5T 1G7",
+  "rating": 4.834,
+  "rating_count": 2,
+  "average_price": 2000,
+  "tags": [
+   "Gourmet burgers",
+   "Vegan & Halal options",
+   "Weekend brunch"
+  ],
+  "hours": [],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/aa49c9ad1dbc8063674ce6ef0f0081e0.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/58ce108a42bcb1cd4948c4d0e3fb155b.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/275be892d06afe319baeab8352e228f7.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/f7e1dd951975534106a6977f7b9fcba3.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/c387be9a9a6360573d3d2c5189e2f0f9.webp"
+  ],
+  "dishes": [
+   {
+    "name": "24hr Marinated Sirloin Top AAA Steak & Eggs",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/8fc7f3d4b914e7e23c4faed746752b0a.webp"
+   },
+   {
+    "name": "Classic-blaze",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/5dbe6032aa67d5ba7d44e336a39b790b.webp"
+   },
+   {
+    "name": "Cheeseburgers",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/19ac22897f64107be039bb644a8b25b4.webp"
+   },
+   {
+    "name": "Crispy-Chicken-Blaze-Burger",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/e1ae9ef0ce24910d9070b873e4a51a8f.webp"
+   },
+   {
+    "name": "Poutine",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/bc78699387d63c231f3708dd513628d5.webp"
+   }
+  ]
+ },
+ {
+  "id": 496,
+  "name": "Tre Viet",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/88d7ba5cac8e7e65b3e4064dd1d074be.webp",
+  "cuisine": "Vietnamese",
+  "city": "Downtown Vancouver",
+  "address": "1114 Denman St, Vancouver, BC V6G 2M8",
+  "rating": 4.834,
+  "rating_count": 2,
+  "average_price": 2000,
+  "tags": [
+   "Vietnamese classics",
+   "Pho & noodles",
+   "Elegant casual dining"
+  ],
+  "hours": [],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/e996309fb665185849c8998a3cec7ca8.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a2a2aa1a6d9507731a34ded63f5719e3.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/5b96e54471f418bef6435d4fee791420.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/4ae2afccee4e6342b08fd9fd32f2e4a0.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/61dbbd0610fc375781e70b8c0607eaf0.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Anchovied chicken wings",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/382bd30bf404046f6d53d4126e592966.webp"
+   },
+   {
+    "name": "Salad Roll - Gỏi Cuốn",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/176aa5b69e78f166e6f37f0ac6e03d95.webp"
+   },
+   {
+    "name": "SpringRoll",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/4ecffe88270a13647fcbff5d5e5e6746.webp"
+   },
+   {
+    "name": "Hanoi Style Vermicelli Noodles with Charred & Caramelized Pork Grilled Over Hot Charcoal -",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/eb7a41a2ad9b5a79a8baf695631ee686.webp"
+   },
+   {
+    "name": "Grilled Lemongrass Chicken and Prawn",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/20795e9d395ae4d4a7e380f16c5ee4b7.webp"
+   }
+  ]
+ },
+ {
+  "id": 497,
+  "name": "Egg & Co.",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/180ea4a47abc1d30c9687f2e0768e2f3.webp",
+  "cuisine": "Brunch",
+  "city": "Vancouver",
+  "address": "4245 Fraser St, Vancouver, BC V5V 4G1",
+  "rating": 0,
+  "rating_count": 0,
+  "average_price": 1800,
+  "tags": [
+   "Brunch",
+   "Creative eggs",
+   "All-day breakfast"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": []
+   },
+   {
+    "day": 4,
+    "hours": [
+     "09:00 - 14:30"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "09:00 - 14:30"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "09:00 - 14:30"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "09:00 - 14:30"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "09:00 - 14:30"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "09:00 - 14:30"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/8fc0406927a69d24d3a037f44a59cb83.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/c2843443bee265cc81d8b32680a7ec8f.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/0bbb5c7379a5e6d646418f11463c7653.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/6d8688009e24e293c7cd9b89cfd4c388.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a69f72066e61b01d3b3bf74cf9c8579e.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Avocado-egg",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/0363182e552df970576d8b1ee4d78616.webp"
+   },
+   {
+    "name": "B.L.T Sandwich",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/97f281401a33227ac5bc2aa374d59667.webp"
+   },
+   {
+    "name": "Breakfast carbonara",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/3e7658596bdcf2c7b04e0eb6662480f3.webp"
+   },
+   {
+    "name": "Cinnamon French Toast",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/71511eb9998002f546a2aca6f78a2322.webp"
+   },
+   {
+    "name": "Scallop bacon benny",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/6d8688009e24e293c7cd9b89cfd4c388.webp"
+   }
+  ]
+ },
+ {
+  "id": 499,
+  "name": "Sparky Chicken",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/9774f3b702adc3c6acc52073f45443f4.webp",
+  "cuisine": "Korean",
+  "city": "Vancouver",
+  "address": "4292 Fraser St, Vancouver, BC V5V 4G2",
+  "rating": 0,
+  "rating_count": 0,
+  "average_price": 2000,
+  "tags": [
+   "Korean fried chicken",
+   "Signature sauces",
+   "Casual dine-in & take-out"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "11:30 - 23:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "11:30 - 23:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "12:00 - 23:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "12:00 - 20:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   },
+   {
+    "day": 2,
+    "hours": [
+     "11:30 - 22:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d5f498af0afe28894924bfd4f3732f8b.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/37d8fb2000dd210cc7c48545bcd8bf04.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/27de26a208fbf7ea618d9e12e171c436.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/4d9f4e97c91a9ff06f02ae9f7806293e.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/c8c5eba7b4fedf4547d04a6d07bef2a7.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Cheese Sprinkle Chicken",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/4d9f4e97c91a9ff06f02ae9f7806293e.webp"
+   },
+   {
+    "name": "Original Chicken",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/c8c5eba7b4fedf4547d04a6d07bef2a7.webp"
+   },
+   {
+    "name": "Sweet Spicy Chicken",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/ebdbd129500e8d1a2c72c69d6d82ebe4.webp"
+   },
+   {
+    "name": "Bulgogi Chicken",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/dbcf0a5d968ed425d5fc66bbc263aaa1.webp"
+   },
+   {
+    "name": "Chicken & Rice Skewer",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/3350b54e2164ecbc7aa6f2e6b05ad4c6.webp"
+   },
+   {
+    "name": "Fried Chicken",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/1d12c9a90e5f577dc57f703cd89977b7.webp"
+   },
+   {
+    "name": "Snack Box",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/91a2a7629e5d4327d62af1e3954999e9.webp"
+   },
+   {
+    "name": "Grilled Chicken",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/6cd3d635d07aa162b90701014e708a31.webp"
+   }
+  ]
+ },
+ {
+  "id": 519,
+  "name": "Sawasdee Thai Restaurant",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/802632890cc9933d0d4c803028ab848f.webp",
+  "cuisine": "Thai",
+  "city": "Vancouver",
+  "address": "4250 Main St, Vancouver, BC V5V 3P9",
+  "rating": 0,
+  "rating_count": 0,
+  "average_price": 2000,
+  "tags": [
+   "Thai cuisine",
+   "Family-run",
+   "Generous portions"
+  ],
+  "hours": [
+   {
+    "day": 3,
+    "hours": [
+     "11:00 - 14:30",
+     "17:00 - 21:00"
+    ]
+   },
+   {
+    "day": 4,
+    "hours": [
+     "11:00 - 14:30",
+     "17:00 - 21:00"
+    ]
+   },
+   {
+    "day": 5,
+    "hours": [
+     "11:00 - 14:30",
+     "17:00 - 21:00"
+    ]
+   },
+   {
+    "day": 6,
+    "hours": [
+     "14:00 - 21:00"
+    ]
+   },
+   {
+    "day": 0,
+    "hours": [
+     "14:00 - 21:00"
+    ]
+   },
+   {
+    "day": 1,
+    "hours": []
+   },
+   {
+    "day": 2,
+    "hours": [
+     "11:00 - 14:30",
+     "17:00 - 21:00"
+    ]
+   }
+  ],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/61ffe8202618b8172fe023a0ef04ca8d.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/3b0c362f0ebcc86f33ac55e6726c5550.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/0c81a0bb5e279f1c356da1d805d1d5a8.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/e2676710477ad883dd23e33705b62fd7.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/efd31c44d42e5b474caa3a4f57891e68.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Pad Eggplant with chicken",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/f10cd9667c5fb4ae89a60b3fb415833d.webp"
+   },
+   {
+    "name": "Pad Woon Sen",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/0704108cce7e2b1f770c0758036facbf.webp"
+   },
+   {
+    "name": "Pad Pad Nor Mai",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a68653403cfcf99a42f1ccb2aaffcb1e.webp"
+   },
+   {
+    "name": "Tom Kha",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/8585c0227b0f7b861719cd495bc9a10d.webp"
+   },
+   {
+    "name": "Yellow Curry",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/344baa42f4e62e03a9a6a5caf90dbb1e.webp"
+   },
+   {
+    "name": "Yum Woon Sen",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/93b259929e5a8ba162a61a0df2c56f00.webp"
+   },
+   {
+    "name": "Mango sticky rice",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/8f2d16584f1df2975ea999fb51fdcdcf.webp"
+   },
+   {
+    "name": "Kor Moo Yang",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/ca00c28acf0364b3db3399852de0c2b4.webp"
+   },
+   {
+    "name": "Thai Ice Tea",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/ee0588c2bbc0b80fb7d759a53c7f3710.webp"
+   },
+   {
+    "name": "Pad Thai",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/7ebabd12747e8fcc932a68b1e8d7b712.webp"
+   },
+   {
+    "name": "Hor Mok Gai Ma Praw Onn",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/dd8a724693f8cc1fe22ebf3ce209a95f.webp"
+   },
+   {
+    "name": "Kao Soi",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/7b742e59437a88ddd8969b16a4881cf4.webp"
+   },
+   {
+    "name": "Gai Ping Platter",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/e97a10e5a854172152eeb30285da5f34.webp"
+   }
+  ]
+ },
+ {
+  "id": 605,
+  "name": "La Taqueria Brentwood",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/065df19ac6f62e942dc6d37742c5afff.webp",
+  "cuisine": "Mexican",
+  "city": "Burnaby",
+  "address": "4580 Brentwood Blvd Unit 1210, Burnaby, BC V5C 3Z6",
+  "rating": 4.834,
+  "rating_count": 2,
+  "average_price": 2500,
+  "tags": [
+   "Mexican tacos & burritos",
+   "Creative Mexican",
+   "Casual dining"
+  ],
+  "hours": [],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/8eae841382b9085b35a5b30e976a52ea.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/fe2412d8030421fa737a574da528f41e.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a2fa71c1cecc68edd2788275d1cd07e3.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/e01c82e50df11f21a043bd41e2bcc8ff.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/35c5fb5a62b94749e2b88b127513dff7.webp"
+  ],
+  "dishes": [
+   {
+    "name": "BOWL - Carne Asada",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/dd0c7a1f56b2e9e6ace5447ba85cf69e.webp"
+   },
+   {
+    "name": "Birriamen",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/a7732fa747adb285b935e9fe1513dd54.webp"
+   },
+   {
+    "name": "Weekend Brunch",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/dad3adf291e264ef0000e8ed60e8c20e.webp"
+   },
+   {
+    "name": "Burrito Norteño",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/d30f5613e7e5808ce141af9d2b686263.webp"
+   },
+   {
+    "name": "Magaritas",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/5008880a028ea096751f7c920ff65d70.webp"
+   },
+   {
+    "name": "Quesabirria Tacos",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/deb74bb5c16f17ad59542dfd971b4e0e.webp"
+   }
+  ]
+ },
+ {
+  "id": 613,
+  "name": "ZAATAR W ZEIT Granville St",
+  "logo": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/c1e78a86c79aff8008713a1dc9bf8900.webp",
+  "cuisine": "Middle Eastern",
+  "city": "Vancouver",
+  "address": "531 Granville St, Vancouver, BC V6C 1X6",
+  "rating": 5,
+  "rating_count": 1,
+  "average_price": 1400,
+  "tags": [
+   "Lebanese cuisine",
+   "Manousheh & wraps",
+   "Mediterranean street food"
+  ],
+  "hours": [],
+  "photos": [
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/28728c23045e3b9ca4e58fd41bb9b9ee.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/073b6d964c01a15f6373601c35f75e65.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/dda15c0857281e937f9c68069506ceac.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/c7bf2bfd2de5e2722fb6f4d37de9c62d.webp",
+   "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/1e5d8376cb8040a1e35a7613c472f6e2.webp"
+  ],
+  "dishes": [
+   {
+    "name": "Vegetarian Denver Omelet Wrap",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/9191782530e69f337271e6ba14b0c39e.webp"
+   },
+   {
+    "name": "Chicken Shawarma",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/3dd882aa7a6194ee5b4c906c6fa0063f.webp"
+   },
+   {
+    "name": "Kafta Supreme Flatbread",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/db7069c3053832207186067e588b6bf9.webp"
+   },
+   {
+    "name": "Wild Zaatar Manousheh",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/93ca48218125bf35fced24df1504cd78.webp"
+   },
+   {
+    "name": "Chicken Shawarma Pan",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/4e660a2add1b8cedfc0e8ff36a97e960.webp"
+   },
+   {
+    "name": "Beef Burger wrap",
+    "image": "https://bravo-auto.s3.ca-central-1.amazonaws.com/images/de63eaf5a8d3fcbbde24a47154a28929.webp"
+   }
+  ]
+ }
+]
