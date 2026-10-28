@@ -406,7 +406,7 @@ function openAuth(mode) {
   authDialog.innerHTML = `
     <div class="drawer-head"><h2 id="auth-title">${signup ? 'Create your account' : 'Sign in'}</h2><button class="round-btn" type="button" data-auth-close aria-label="Close">${CLOSE}</button></div>
     <form class="modal-body" data-mode="${mode}">
-      <p class="modal-lede">${signup ? 'Sign up to order ahead for pickup and pay with your Bravo Dining Gift Card.' : 'Sign in to your Bravo account to place pickup orders.'}</p>
+      <p class="modal-lede">${signup ? 'Sign up to order ahead for pickup and pay with your Bravo Balance.' : 'Sign in to your Bravo account to place pickup orders.'}</p>
       ${signup ? field('auth-name', 'Name', 'name="name" type="text" autocomplete="name"') : ''}
       ${field('auth-email', 'Email', 'name="email" type="email" autocomplete="email" placeholder="you@example.com"')}
       ${field('auth-password', 'Password', `name="password" type="password" autocomplete="${signup ? 'new-password' : 'current-password'}" minlength="${signup ? 8 : 1}"`)}
