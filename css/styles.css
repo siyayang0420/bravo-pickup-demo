@@ -159,7 +159,7 @@ h1, h2, h3, p { margin: 0; }
 .round-btn:disabled { cursor: default; }
 .flip { transform: scaleX(-1); }
 .dish-track {
-  display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+  display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
   margin: 0 calc(-1 * var(--gutter)); padding: 0 var(--gutter); scroll-padding: 0 var(--gutter);
 }
 .dish-card { flex: none; width: var(--dish-w); display: flex; flex-direction: column; gap: 8px; scroll-snap-align: start; }
