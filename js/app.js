@@ -466,6 +466,11 @@ drawer.addEventListener('submit', (e) => {
   renderDrawer()
 })
 
+const nav = $('.nav')
+const onScroll = () => nav.classList.toggle('scrolled', scrollY > 0)
+addEventListener('scroll', onScroll, { passive: true })
+onScroll()
+
 if (document.body.dataset.page === 'home') renderHome()
 else renderStore()
 renderAuth()
