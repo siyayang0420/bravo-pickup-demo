@@ -334,7 +334,7 @@ function renderDrawer() {
         <p>${esc(placed.store.name)} is preparing your order.</p>
         <span class="code">${placed.code}</span>
         <p>Pickup ${esc(placed.time)} at ${esc(fullAddress(placed.store))}. Show this code at the counter.</p>
-        <p>${placed.pay === 'giftcard' ? `${money(placed.total)} will be paid from your Bravo Dining Gift Card.` : `${money(placed.total)} will be charged to your card through Stripe.`}</p>
+        <p>${placed.pay === 'giftcard' ? `${money(placed.total)} will be paid from your Bravo Balance.` : `${money(placed.total)} will be charged to your card through Stripe.`}</p>
         <p><small>This is a demo. No order was sent to the restaurant.</small></p>
       </div></div>
       <div class="drawer-foot"><button class="btn btn-block" type="button" data-close>Done</button></div>`
@@ -364,7 +364,7 @@ function renderDrawer() {
         </div>
         <fieldset class="field">
           <legend>Payment</legend>
-          <label class="radio"><input type="radio" name="pay" value="giftcard" checked><span>Bravo Dining Gift Card<small>Pay from your card balance</small></span></label>
+          <label class="radio"><input type="radio" name="pay" value="giftcard" checked><span>Bravo Balance<small>Pay from your Bravo balance</small></span><span class="pay-logo bravo-logo"><img src="assets/logo-bravo.svg" alt="Bravo" width="40" height="12"></span></label>
           <label class="radio"><input type="radio" name="pay" value="card"><span>Credit card<small class="pay-methods">${CARDS}<span title="Additional payment methods via Stripe">+ more</span></small></span><img class="pay-logo" src="assets/pay/stripe-logo.svg" alt="Stripe" width="41" height="17"></label>
         </fieldset>
       </div>

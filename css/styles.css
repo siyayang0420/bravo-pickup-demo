@@ -312,6 +312,8 @@ fieldset.field { border: 0; margin: 24px 0 0; padding: 0; min-width: 0; }
 .radio .pay-methods { display: flex; align-items: center; gap: 4px; margin-top: 4px; }
 .pay-methods img { height: 20px; width: auto; }
 .pay-logo { flex: none; margin-left: auto; }
+.bravo-logo { display: flex; align-items: center; justify-content: center; height: 28px; padding: 0 10px; border-radius: 8px; background: var(--yolk); }
+.radio > .bravo-logo { font-weight: 400; }
 .totals { display: grid; gap: 4px; }
 .totals div { display: flex; justify-content: space-between; }
 .totals .total { font-size: 16px; font-weight: 600; }
