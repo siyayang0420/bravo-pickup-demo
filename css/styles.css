@@ -206,10 +206,10 @@ h1, h2, h3, p { margin: 0; }
 .add-btn:active { transform: scale(0.92); }
 /* once added: white "− n +" pill in the same spot as the "+" */
 .qty-ctl.on {
-  display: grid; grid-template-columns: 30px 20px 30px; align-items: center; height: 35px;
+  display: grid; grid-template-columns: 31px 18px 31px; align-items: center; height: 35px; padding: 0 2px;
   border-radius: 999px; background: var(--white); filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.15));
 }
-.qty-ctl.on button { display: flex; align-items: center; justify-content: center; width: 30px; height: 35px; padding: 0; border: 0; border-radius: 999px; background: transparent; }
+.qty-ctl.on button { display: flex; align-items: center; justify-content: center; width: 31px; height: 31px; padding: 0; border: 0; border-radius: 999px; background: transparent; }
 .qty-ctl.on button:hover { background: var(--n100); }
 .qty-ctl.on span { text-align: center; font-size: 14px; font-weight: 600; }
 .dish-text { display: flex; flex-direction: column; min-width: 0; line-height: 21px; }
