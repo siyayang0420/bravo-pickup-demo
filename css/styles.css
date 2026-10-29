@@ -36,7 +36,7 @@ body {
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
-button, input, select { font: inherit; color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
 button { cursor: pointer; }
 h1, h2, h3, p { margin: 0; }
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
@@ -329,6 +329,14 @@ body.has-cart .footer-inner { padding-bottom: 88px; } /* room for the cart bar *
 .field select, .field input:not([type="radio"]) {
   height: 48px; padding: 0 16px; border: 1px solid var(--n200); border-radius: 12px; background: var(--white); font-size: 16px;
 }
+.field textarea {
+  min-height: 88px; padding: 12px 16px; border: 1px solid var(--n200); border-radius: 12px; background: var(--white);
+  font-size: 16px; line-height: 24px; resize: vertical;
+}
+.field textarea::placeholder, .field input::placeholder { color: var(--n400); }
+.field textarea:focus { outline: none; border-color: var(--ink); }
+.field .optional { font-weight: 400; color: var(--n500); }
+.done .done-note { font-style: italic; }
 fieldset.field { border: 0; margin: 24px 0 0; padding: 0; min-width: 0; }
 .radio { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 1px solid var(--n200); border-radius: 12px; cursor: pointer; }
 .radio:has(input:checked) { border-color: var(--ink); }

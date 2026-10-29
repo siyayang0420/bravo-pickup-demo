@@ -333,6 +333,7 @@ function renderDrawer() {
         <p>${esc(placed.store.name)} is preparing your order.</p>
         <span class="code">${placed.code}</span>
         <p>Pickup ${esc(placed.time)} at ${esc(fullAddress(placed.store))}. Show this code at the counter.</p>
+        ${placed.note ? `<p class="done-note">Your note: “${esc(placed.note)}”</p>` : ''}
         <p>${placed.pay === 'giftcard' ? `${money(placed.total)} will be paid from your Bravo Balance.` : `${money(placed.total)} will be charged to your card through Stripe.`}</p>
         <p><small>This is a demo. No order was sent to the restaurant.</small></p>
       </div></div>
@@ -360,6 +361,10 @@ function renderDrawer() {
         <div class="field">
           <label for="pickup-name">Name for the order</label>
           <input id="pickup-name" name="name" type="text" autocomplete="given-name" value="${esc(signedIn() ? user.name : '')}" required>
+        </div>
+        <div class="field">
+          <label for="pickup-note">Note for the restaurant <span class="optional">(optional)</span></label>
+          <textarea id="pickup-note" name="note" rows="3" maxlength="200" placeholder="Allergies, spice level, extra utensils…"></textarea>
         </div>
         <fieldset class="field">
           <legend>Payment</legend>
@@ -455,6 +460,7 @@ drawer.addEventListener('submit', (e) => {
   placed = {
     store: STORES.find(s => s.id === cart.store),
     name: form.get('name').trim(),
+    note: form.get('note').trim(),
     pay: form.get('pay'),
     total: totals().total,
     code: `B${Math.floor(1000 + Math.random() * 9000)}`,
