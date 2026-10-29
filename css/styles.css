@@ -62,15 +62,27 @@ h1, h2, h3, p { margin: 0; }
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
 }
-.nav::after, .cat-nav::after {
-  content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 20px; pointer-events: none;
-  background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  -webkit-mask-image: linear-gradient(#000, transparent); mask-image: linear-gradient(#000, transparent);
-  opacity: 0; transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+/* Progressive fade: a strong blur just below the bar, a lighter one further down, both masked with eased
+   gradients so the page melts into the bar instead of meeting an edge. */
+.nav::before, .nav::after, .cat-nav::before, .cat-nav::after {
+  content: ''; position: absolute; left: 0; right: 0; top: 100%; pointer-events: none;
+  opacity: 0; transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.nav.scrolled::after, .cat-nav.stuck::after { opacity: 1; }
-@media (prefers-reduced-motion: reduce) { .nav, .nav::after, .cat-nav::after { transition: none; } }
+.nav::before, .cat-nav::before {
+  height: 24px;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(#000, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.2) 75%, transparent);
+  mask-image: linear-gradient(#000, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.2) 75%, transparent);
+}
+.nav::after, .cat-nav::after {
+  height: 56px;
+  background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.55) 20%, rgba(255, 255, 255, 0.25) 45%, rgba(255, 255, 255, 0.08) 70%, rgba(255, 255, 255, 0));
+  backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+  -webkit-mask-image: linear-gradient(#000, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.08) 85%, transparent);
+  mask-image: linear-gradient(#000, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.08) 85%, transparent);
+}
+.nav.scrolled::before, .nav.scrolled::after, .cat-nav.stuck::before, .cat-nav.stuck::after { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .nav, .nav::before, .nav::after, .cat-nav::before, .cat-nav::after { transition: none; } }
 .nav .container { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .nav-brand:hover { opacity: 0.8; }
