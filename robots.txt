@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://siyayang0420.github.io/bravo-pickup-demo/sitemap.xml
