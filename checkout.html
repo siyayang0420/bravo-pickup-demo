@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Bravo Pickup</title>
+  <link rel="preconnect" href="https://bravo-auto.s3.ca-central-1.amazonaws.com">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="assets/fonts/FTRegolaNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/FTRegolaNeue-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="modulepreload" href="js/data.js">
+  <script type="module" src="js/pages/checkout.js"></script>
+  <meta name="description" content="Check out your Bravo pickup order.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <a class="nav-brand" href="index.html" aria-label="Bravo pickup home">
+        <img src="assets/logo-bravo.svg" alt="bravo" width="87.4" height="26">
+        <span class="nav-tag">Pickup</span>
+      </a>
+      <div class="nav-actions">
+        <span class="auth-slot" data-auth-slot><button class="btn-ghost" type="button" data-auth="signin">Sign In / Sign Up</button></span>
+      </div>
+    </div>
+  </header>
+
+  <main data-checkout-page></main>
+
+  <dialog class="drawer" aria-labelledby="cart-title" data-drawer></dialog>
+  <dialog class="auth-modal" aria-labelledby="auth-title" data-auth-dialog></dialog>
+
+</body>
+</html>

@@ -1,14 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Order Ahead for Pickup | Bravo</title>
-  <meta name="description" content="Order ahead from 20 Bravo restaurants across Metro Vancouver and pick it up hot. Featured dishes are 20% off for pickup.">
-  <link rel="preload" href="assets/fonts/FTRegolaNeue-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://bravo-auto.s3.ca-central-1.amazonaws.com">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="assets/fonts/FTRegolaNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/FTRegolaNeue-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="modulepreload" href="js/data.js">
+  <script type="module" src="js/pages/home.js"></script>
+  <meta name="description" content="Order ahead from 20 Bravo restaurants across Metro Vancouver and pick it up hot. Featured dishes are 20% off for pickup.">
+  <link rel="canonical" href="./">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bravo">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:title" content="Order Ahead for Pickup | Bravo">
+  <meta property="og:description" content="Order ahead from 20 Bravo restaurants across Metro Vancouver and pick it up hot. Featured dishes are 20% off for pickup.">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bravo Pickup: order ahead, skip the line">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.bravoup.ca/#organization","name":"Bravo","url":"https://www.bravoup.ca/","logo":"https://www.bravoup.ca/images/logo-bravo.svg","sameAs":["https://www.instagram.com/bravo_rewards_ca/","https://www.linkedin.com/company/bravoup/","https://www.facebook.com/bravorewardscanada/"]}</script>
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
-<body data-page="home">
+<body>
   <header class="nav">
     <div class="container">
       <a class="nav-brand" href="index.html" aria-label="Bravo pickup home">
@@ -24,35 +44,37 @@
 
   <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="hero-kicker"><span>New</span> Pickup orders on Bravo</p>
-          <h1>Order ahead.<br>Skip the line.</h1>
-          <p class="hero-lede">Choose your dishes from 20 restaurants across Metro Vancouver, pick a time, and collect it hot at the counter. Featured dishes are 20% off when you pick up.</p>
-          <label class="search">
-            <span class="sr-only">Search restaurants or dishes</span>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.5"/><path d="m13.5 13.5 3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            <input type="search" placeholder="Search a restaurant or dish" autocomplete="off" data-search>
-          </label>
-        </div>
-        <div class="hero-art" data-hero-art aria-hidden="true"></div>
+      <div class="container">
+        <p class="hero-kicker"><span>New</span> Pickup orders on Bravo</p>
+        <h1>Order ahead. <em>Skip the line.</em></h1>
+        <p class="hero-lede">Pick up from 20 restaurants across Metro Vancouver. Featured dishes are 20% off.</p>
+        <form class="finder" role="search" data-finder>
+          <div class="finder-bar">
+            <label class="finder-field finder-city">
+              <span class="sr-only">City</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <select data-city>
+                <option value="">Metro Vancouver</option>
+                <option>Vancouver</option>
+                <option>Burnaby</option>
+                <option>Richmond</option>
+              </select>
+            </label>
+            <label class="finder-field finder-query">
+              <span class="sr-only">Search restaurants or dishes</span>
+              <svg width="22" height="22" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.5"/><path d="m13.5 13.5 3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <input type="search" placeholder="Restaurant or dish" autocomplete="off" data-search>
+            </label>
+          </div>
+          <button class="finder-go" type="submit" aria-label="Show restaurants"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
       </div>
     </section>
 
     <section class="section container" aria-labelledby="most-liked">
-      <div class="dish-row" data-carousel>
-        <div class="dish-row-head">
-          <div class="dish-row-title">
-            <h2 id="most-liked">Most liked for pickup</h2>
-            <p>The <b>#1</b> dish at each restaurant</p>
-          </div>
-          <div class="dish-row-nav">
-            <button class="round-btn" type="button" data-prev aria-label="Previous dishes"><img class="on flip" src="assets/icons/chevron-right.svg" alt="" width="20" height="20"><img class="off" src="assets/icons/chevron-left.svg" alt="" width="20" height="20"></button>
-            <button class="round-btn" type="button" data-next aria-label="More dishes"><img class="on" src="assets/icons/chevron-right.svg" alt="" width="20" height="20"><img class="off flip" src="assets/icons/chevron-left.svg" alt="" width="20" height="20"></button>
-          </div>
-        </div>
-        <div class="dish-track hide-scrollbar" data-track data-top-dishes></div>
-      </div>
+      <h2 class="section-title" id="most-liked">Most liked for pickup</h2>
+      <p class="section-sub">The top dishes at each restaurant</p>
+      <div class="brand-rows" data-brand-rows></div>
     </section>
 
     <section class="section container" aria-labelledby="how">
@@ -71,6 +93,40 @@
       <div class="store-grid" data-store-grid></div>
       <p class="empty" hidden data-empty>No restaurants match that search.</p>
     </section>
+
+    <!-- Follows the bravoup.ca FAQ (components/Faq.vue): title column, then questions split by hairlines -->
+    <section class="section container faq" aria-labelledby="faq">
+      <div class="faq-head">
+        <h2 class="section-title" id="faq">Questions about pickup</h2>
+        <p class="section-sub">Everything you need before your first order</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>How much do I save with pickup?</summary>
+          <p>Featured dishes are 20% off when you order for pickup, and there are no delivery fees. Some restaurants also have offers, shown under "Offers &amp; savings" on their page.</p>
+        </details>
+        <details>
+          <summary>When will my order be ready?</summary>
+          <p>Each restaurant shows its ready time at the top of its page. At checkout, pick "As soon as it's ready" or a 15-minute slot later today.</p>
+        </details>
+        <details>
+          <summary>Where do I pick up my order?</summary>
+          <p>At the restaurant's counter. Show the pickup code from your confirmation and grab your food, with no waiting in line.</p>
+        </details>
+        <details>
+          <summary>How can I pay?</summary>
+          <p>With your Bravo Balance, or by credit card through Stripe. We take Visa, Mastercard, Amex, Alipay and WeChat Pay.</p>
+        </details>
+        <details>
+          <summary>Do I need a Bravo account?</summary>
+          <p>Yes. You can browse menus and fill your cart without one, but you'll need to sign in or sign up to place an order.</p>
+        </details>
+        <details>
+          <summary>Can I leave a note for the restaurant?</summary>
+          <p>Yes. Add a note to any dish for the kitchen when you add it to your cart, and a note for the whole order at checkout.</p>
+        </details>
+      </div>
+    </section>
   </main>
 
 <!-- Same as the bravoup.ca gift card footer (components/Footer.vue in bravo_web_client_v2) -->
@@ -83,10 +139,10 @@
           <p>Pay in seconds with your QR code, and get rewards only in the app.</p>
         </div>
         <div class="footer-app-get">
-          <div class="footer-qr"><img src="assets/badges/get-app-qr.svg" alt="QR code to download the Bravo app" width="80" height="80"></div>
+          <div class="footer-qr"><img loading="lazy" decoding="async" src="assets/badges/get-app-qr.svg" alt="QR code to download the Bravo app" width="80" height="80"></div>
           <div class="footer-badges">
-            <a href="https://apps.apple.com/app/bravo-rewards/id6477488926" target="_blank" rel="noopener noreferrer"><img src="assets/badges/app-store.svg" alt="Download on the App Store" width="120" height="40"></a>
-            <a class="gplay" href="https://play.google.com/store/apps/details?id=ca.bravoup.app" target="_blank" rel="noopener noreferrer"><img src="assets/badges/google-play.png" alt="Get it on Google Play" width="155" height="60"></a>
+            <a href="https://apps.apple.com/app/bravo-rewards/id6477488926" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" src="assets/badges/app-store.svg" alt="Download on the App Store" width="120" height="40"></a>
+            <a class="gplay" href="https://play.google.com/store/apps/details?id=ca.bravoup.app" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" src="assets/badges/google-play.png" alt="Get it on Google Play" width="155" height="60"></a>
           </div>
         </div>
       </section>
@@ -123,9 +179,8 @@
 
   <button class="cart-bar" type="button" hidden data-cart-bar data-open-cart></button>
   <dialog class="drawer" aria-labelledby="cart-title" data-drawer></dialog>
-  <dialog class="modal" aria-labelledby="auth-title" data-auth-dialog></dialog>
+  <dialog class="auth-modal" aria-labelledby="auth-title" data-auth-dialog></dialog>
+  <dialog class="modal dish-modal" aria-labelledby="dish-title" data-dish-dialog></dialog>
 
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
 </body>
 </html>
